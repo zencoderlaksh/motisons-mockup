@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<title>Motisons Shares | The Investment Universe</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Cinzel:wght@500;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            midnight: "#050B16",
+            navy: "#081426",
+            "navy-card": "#0C1D36",
+            "navy-border": "#1A2D4C",
+            motiblue: "#155EEF",
+            electric: "#3B82F6",
+            gold: "#D6A84F",
+            "gold-light": "#F1D58A",
+            "gold-dark": "#9A7328",
+            cream: "#F8FAFC"
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+            serif: ['"Cinzel"', 'serif'],
+          },
+          animation: {
+            'spin-slow': 'spin 40s linear infinite',
+            'spin-reverse-slow': 'spin-reverse 55s linear infinite',
+            'spin-orbital': 'spin 25s linear infinite',
+            'float-slow': 'float 7s ease-in-out infinite',
+            'float-delay': 'float 8s ease-in-out 3s infinite',
+            'pulse-glow': 'pulse-glow 4s ease-in-out infinite',
+            'flow-dash': 'dash 18s linear infinite',
+          },
+          keyframes: {
+            'spin-reverse': {
+              'from': { transform: 'rotate(360deg)' },
+              'to': { transform: 'rotate(0deg)' }
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '50%': { transform: 'translateY(-14px) rotate(1deg)' },
+            },
+            'pulse-glow': {
+              '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+              '50%': { opacity: '0.9', transform: 'scale(1.08)' },
+            },
+            dash: {
+              'to': { strokeDashoffset: '-1000' }
+            }
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #050B16;
+        color: #F8FAFC;
+        overflow-x: hidden;
+      }
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050B16;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1A2D4C;
+        border-radius: 9999px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #D6A84F;
+      }
+    }
+
+    .gold-gradient {
+      background: linear-gradient(135deg, #FFF0CA 0%, #D6A84F 50%, #9A7328 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .gold-glow {
+      box-shadow: 0 0 50px -10px rgba(214, 168, 79, 0.35);
+    }
+
+    .blue-glow {
+      box-shadow: 0 0 60px -15px rgba(21, 94, 239, 0.45);
+    }
+
+    .perspective-1000 {
+      perspective: 1000px;
+    }
+
+    .transform-style-3d {
+      transform-style: preserve-3d;
+    }
+
+    /* Radial noise & ambient stage lighting */
+    .radial-aurora {
+      background: radial-gradient(ellipse 60% 45% at 50% 50%, rgba(214, 168, 79, 0.12) 0%, rgba(21, 94, 239, 0.08) 55%, transparent 100%);
+    }
+
+    .light-trail {
+      stroke-dasharray: 12 18;
+      animation: dash 35s linear infinite;
+    }
+  </style>
+</head>
+<body class="bg-midnight font-sans antialiased text-slate-100 selection:bg-gold selection:text-midnight">
+<!-- =========================================================================
+       1. FLOATING MINIMAL STICKY NAVIGATION
+       ========================================================================= -->
+<header class="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 pt-4">
+<div class="max-w-7xl mx-auto h-20 bg-midnight/70 backdrop-blur-2xl rounded-2xl border border-white/10 shadow-[0_20px_60px_-15px_rgba(5,11,22,0.9)] px-6 flex items-center justify-between gap-6 transition-all duration-300">
+<!-- Brand Logo -->
+<a class="flex items-center gap-3.5 group" href="index.html" title="Back to Motisons Prototype Hub">
+<div class="w-11 h-11 rounded-xl bg-gradient-to-br from-gold-light via-gold to-gold-dark p-[1px] shadow-[0_0_24px_rgba(214,168,79,0.35)] group-hover:scale-105 transition-transform duration-300">
+<div class="w-full h-full rounded-[11px] bg-navy flex items-center justify-center">
+<span class="font-serif text-xl text-gold font-bold tracking-tight">M</span>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-display text-sm font-bold tracking-widest text-white uppercase">MOTISONS</span>
+<span class="w-1.5 h-1.5 rounded-full bg-gold animate-ping"></span>
+</div>
+<span class="text-[10px] text-gold/80 font-semibold tracking-[0.25em] uppercase">Investment Universe</span>
+</div>
+</a>
+<!-- Central Nav Links -->
+<nav class="hidden lg:flex items-center gap-1.5 bg-navy/60 border border-white/5 p-1 rounded-xl">
+<a class="px-4 py-2 rounded-lg text-xs font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-all" href="#showcase">Products</a>
+<a class="px-4 py-2 rounded-lg text-xs font-semibold bg-white/10 text-gold shadow-inner border border-gold/20" href="#universe">Invest</a>
+<a class="px-4 py-2 rounded-lg text-xs font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-all" href="#trajectory">Markets</a>
+<a class="px-4 py-2 rounded-lg text-xs font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-all" href="#discovery">Tools</a>
+<a class="px-4 py-2 rounded-lg text-xs font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-all" href="#showcase">Learn</a>
+<a class="px-4 py-2 rounded-lg text-xs font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-all" href="#footer">About Us</a>
+</nav>
+<!-- Right CTAs -->
+<div class="flex items-center gap-4">
+<button aria-label="Search Ecosystem" class="w-10 h-10 rounded-xl flex items-center justify-center text-slate-400 hover:text-gold hover:bg-white/5 transition-all" onclick="document.getElementById('discovery').scrollIntoView({behavior: 'smooth'})" type="button">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</button>
+<a class="hidden sm:inline-flex items-center text-xs font-medium text-slate-300 hover:text-gold transition-colors px-2" href="#">Login</a>
+<a class="relative group px-6 py-2.5 rounded-xl bg-gradient-to-r from-motiblue via-electric to-motiblue text-white text-xs font-bold tracking-wider uppercase flex items-center gap-2 shadow-[0_0_30px_rgba(21,94,239,0.5)] hover:shadow-[0_0_35px_rgba(214,168,79,0.5)] hover:from-gold hover:to-gold-light hover:text-midnight transition-all duration-300" href="#discovery">
+<span>OPEN ACCOUNT</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</header>
+<!-- =========================================================================
+       2. HERO SECTION — THE 3D INVESTMENT UNIVERSE (APPLE KEYNOTE / 915 STYLE)
+       ========================================================================= -->
+<section class="relative min-h-screen w-full pt-32 pb-24 px-4 md:px-8 flex flex-col justify-center overflow-hidden" id="universe">
+<!-- Huge Ambient Lighting Backdrops -->
+<div class="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1100px] h-[750px] radial-aurora blur-[90px]"></div>
+<div class="pointer-events-none absolute top-1/2 right-[-10%] w-[600px] h-[600px] bg-motiblue/10 blur-[140px] rounded-full"></div>
+<div class="pointer-events-none absolute bottom-10 left-[-5%] w-[500px] h-[500px] bg-gold/10 blur-[130px] rounded-full"></div>
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10">
+<!-- Left Hero Typography (30% text / High Impact) -->
+<div class="lg:col-span-5 flex flex-col gap-6 z-20">
+<!-- Eyebrow Badge -->
+<div class="inline-flex items-center gap-2.5 self-start px-4 py-1.5 rounded-full bg-navy/90 border border-gold/30 shadow-[0_0_20px_rgba(214,168,79,0.2)]">
+<span class="w-2 h-2 rounded-full bg-gold shadow-[0_0_10px_#D6A84F] animate-pulse"></span>
+<span class="text-[11px] font-bold text-gold tracking-[0.22em] uppercase">MOTISONS INVESTMENT ECOSYSTEM</span>
+</div>
+<!-- Hero Headline -->
+<h1 class="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[76px] font-extrabold tracking-tight leading-[1.05] text-white">
+          More Ways to Invest. 
+          <span class="block gold-gradient">One Place</span> 
+          to Begin.
+        </h1>
+<!-- Subtitle -->
+<p class="text-base sm:text-lg text-slate-300 font-normal max-w-lg leading-relaxed">
+          Explore investments designed for different goals, time horizons and risk preferences. Built on two decades of premier wealth governance.
+        </p>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="group px-8 py-4 rounded-xl bg-gradient-to-r from-motiblue to-electric hover:from-gold hover:to-gold-light text-white hover:text-midnight font-bold text-xs tracking-widest uppercase flex items-center gap-3 shadow-[0_12px_40px_rgba(21,94,239,0.5)] hover:shadow-[0_12px_40px_rgba(214,168,79,0.4)] transition-all duration-300" href="#showcase">
+<span>EXPLORE INVESTMENTS</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="px-8 py-4 rounded-xl bg-navy/80 hover:bg-navy-card text-white font-bold text-xs tracking-widest uppercase flex items-center gap-2 border border-gold/30 hover:border-gold transition-all duration-300" href="#discovery">
+<span>OPEN ACCOUNT</span>
+<span class="material-symbols-outlined text-[16px] text-gold">north_east</span>
+</a>
+</div>
+<!-- Editorial Proof Points -->
+<div class="flex items-center gap-8 pt-6 border-t border-white/10 mt-2">
+<div>
+<span class="block font-display text-2xl font-bold text-white tracking-tight">₹4,200+ Cr</span>
+<span class="text-[11px] text-slate-400 uppercase tracking-widest">Assets Governed</span>
+</div>
+<div class="w-px h-8 bg-white/10"></div>
+<div>
+<span class="block font-display text-2xl font-bold text-gold tracking-tight">CDSL &amp; SEBI</span>
+<span class="text-[11px] text-slate-400 uppercase tracking-widest">Direct Depository</span>
+</div>
+</div>
+</div>
+<!-- Right Column: 3D Financial Solar System (70% Visual Concept) -->
+<div class="lg:col-span-7 relative flex items-center justify-center min-h-[580px] lg:min-h-[720px] perspective-1000">
+<!-- Center Emblem: Motisons Golden Sun Core -->
+<div class="relative z-20 flex flex-col items-center justify-center animate-float-slow">
+<div class="w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-gradient-to-br from-gold-light via-gold to-gold-dark p-[2px] shadow-[0_0_80px_rgba(214,168,79,0.65)] relative group cursor-pointer">
+<div class="w-full h-full rounded-full bg-midnight flex flex-col items-center justify-center relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-gold/25 via-transparent to-electric/20 animate-pulse"></div>
+<span class="font-serif text-4xl sm:text-5xl font-extrabold text-gold tracking-tight drop-shadow-[0_2px_10px_rgba(214,168,79,0.8)]">M</span>
+<span class="text-[9px] font-bold tracking-[0.3em] text-white/80 uppercase mt-1">CORE</span>
+</div>
+</div>
+<!-- Orbit Center Halo -->
+<div class="absolute w-44 h-44 rounded-full border border-gold/30 animate-ping opacity-25"></div>
+</div>
+<!-- 3D Concentric Orbital Rings (Tilted Space) -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<!-- Ring 1 (Inner Gold) -->
+<div class="w-[340px] h-[340px] sm:w-[400px] sm:h-[400px] rounded-full border border-gold/40 border-dashed animate-spin-orbital [transform:rotateX(68deg)_rotateY(15deg)] shadow-[0_0_30px_rgba(214,168,79,0.15)]"></div>
+<!-- Ring 2 (Middle Blue-Gold) -->
+<div class="w-[480px] h-[480px] sm:w-[560px] sm:h-[560px] rounded-full border border-electric/30 animate-spin-slow [transform:rotateX(62deg)_rotateY(-18deg)]"></div>
+<!-- Ring 3 (Outer Celestial) -->
+<div class="w-[620px] h-[620px] sm:w-[720px] sm:h-[720px] rounded-full border border-gold/20 border-dotted animate-spin-reverse-slow [transform:rotateX(72deg)_rotateY(10deg)]"></div>
+</div>
+<!-- Floating Glassmorphic Celestial Nodes (Orbiting Instruments) -->
+<!-- 1. EQUITY (Top Left) -->
+<div class="absolute top-10 left-4 sm:left-12 z-30 p-3.5 sm:p-4 rounded-2xl bg-navy-card/85 backdrop-blur-xl border border-white/15 shadow-[0_15px_35px_rgba(0,0,0,0.5)] hover:border-gold hover:scale-105 transition-all duration-300 animate-float-slow cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-electric/30 to-motiblue/40 border border-electric/40 flex items-center justify-center text-electric shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+<span class="material-symbols-outlined text-[22px]">trending_up</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-display text-sm font-bold text-white">EQUITY</span>
+<span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-semibold">+18.4%</span>
+</div>
+<p class="text-[11px] text-gold font-medium">Direct Ownership</p>
+</div>
+</div>
+</div>
+<!-- 2. MUTUAL FUNDS (Top Right) -->
+<div class="absolute top-16 right-2 sm:right-10 z-30 p-3.5 sm:p-4 rounded-2xl bg-navy-card/85 backdrop-blur-xl border border-white/15 shadow-[0_15px_35px_rgba(0,0,0,0.5)] hover:border-electric hover:scale-105 transition-all duration-300 animate-float-delay cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500/20 to-indigo-500/30 border border-indigo-400/30 flex items-center justify-center text-indigo-400 shadow-[0_0_15px_rgba(99,102,241,0.4)]">
+<span class="material-symbols-outlined text-[22px]">donut_large</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-display text-sm font-bold text-white">MUTUAL FUNDS</span>
+</div>
+<p class="text-[11px] text-indigo-300 font-medium">Smart Compounding</p>
+</div>
+</div>
+</div>
+<!-- 3. IPO DESK (Mid Right) -->
+<div class="absolute top-1/2 -translate-y-1/2 right-0 sm:-right-4 z-30 p-3.5 sm:p-4 rounded-2xl bg-navy-card/90 backdrop-blur-xl border border-gold/40 shadow-[0_0_25px_rgba(214,168,79,0.3)] hover:scale-105 transition-all duration-300 cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold/30 to-gold-dark/40 border border-gold/50 flex items-center justify-center text-gold shadow-[0_0_20px_rgba(214,168,79,0.6)]">
+<span class="material-symbols-outlined text-[22px]">rocket_launch</span>
+</div>
+<div>
+<span class="font-display text-sm font-bold text-white">IPO DESK</span>
+<p class="text-[11px] text-gold font-medium">Day-One Priority</p>
+</div>
+</div>
+</div>
+<!-- 4. BONDS & FIXED INCOME (Bottom Left) -->
+<div class="absolute bottom-16 left-2 sm:left-10 z-30 p-3.5 sm:p-4 rounded-2xl bg-navy-card/85 backdrop-blur-xl border border-white/15 shadow-[0_15px_35px_rgba(0,0,0,0.5)] hover:border-gold hover:scale-105 transition-all duration-300 animate-float-delay cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-500/30 border border-emerald-400/40 flex items-center justify-center text-emerald-300">
+<span class="material-symbols-outlined text-[22px]">shield</span>
+</div>
+<div>
+<span class="font-display text-sm font-bold text-white">BONDS</span>
+<p class="text-[11px] text-emerald-400 font-medium">Predictable Yields</p>
+</div>
+</div>
+</div>
+<!-- 5. GOLD BONDS / SGB (Bottom Right) -->
+<div class="absolute bottom-12 right-6 sm:right-20 z-30 p-3.5 sm:p-4 rounded-2xl bg-navy-card/85 backdrop-blur-xl border border-gold/30 shadow-[0_15px_35px_rgba(0,0,0,0.5)] hover:border-gold hover:scale-105 transition-all duration-300 animate-float-slow cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold/30 to-amber-500/40 border border-gold/50 flex items-center justify-center text-gold shadow-[0_0_15px_rgba(214,168,79,0.4)]">
+<span class="material-symbols-outlined text-[22px]">monetization_on</span>
+</div>
+<div>
+<span class="font-display text-sm font-bold text-white">SGB &amp; GOLD</span>
+<p class="text-[11px] text-gold-light font-medium">2.5% RBI Coupon</p>
+</div>
+</div>
+</div>
+<!-- 6. ETFs (Mid Left) -->
+<div class="absolute top-[52%] left-0 sm:left-4 z-30 p-3 rounded-2xl bg-navy-card/85 backdrop-blur-xl border border-white/15 shadow-[0_15px_35px_rgba(0,0,0,0.5)] hover:border-electric hover:scale-105 transition-all duration-300 cursor-pointer">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-xl bg-electric/20 border border-electric/30 flex items-center justify-center text-electric">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+</div>
+<div>
+<span class="font-display text-xs font-bold text-white">INDEX ETFs</span>
+<p class="text-[10px] text-slate-300 font-medium">Ultra-low Expense</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       3. SECTION 2 — THE GOLDEN TRAJECTORY ("Find Your Way to Wealth.")
+       ========================================================================= -->
+<section class="relative w-full py-28 px-4 md:px-8 bg-gradient-to-b from-midnight via-navy to-midnight overflow-hidden" id="trajectory">
+<!-- Ambient Backdrop Glow -->
+<div class="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[400px] bg-gold/10 blur-[150px] rounded-full"></div>
+<div class="max-w-7xl mx-auto flex flex-col items-center text-center relative z-10">
+<!-- Monolithic Headline -->
+<span class="text-xs font-bold tracking-[0.3em] text-gold uppercase mb-3">SEAMLESS JOURNEY</span>
+<h2 class="font-display text-5xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight">
+        Find Your Way to <span class="gold-gradient">Wealth.</span>
+</h2>
+<p class="text-slate-300 text-lg md:text-xl font-normal max-w-xl mt-4">
+        One ecosystem. Multiple ways to invest. Governed with uncompromising clarity.
+      </p>
+<!-- Animated SVG Golden Trajectory Spline -->
+<div class="w-full relative mt-16 max-w-5xl">
+<svg class="w-full h-44 md:h-56 overflow-visible" fill="none" viewbox="0 0 1000 200">
+<!-- Background guide line -->
+<path d="M 50 100 C 250 20, 350 180, 500 100 C 650 20, 750 180, 950 100" stroke="rgba(255,255,255,0.08)" stroke-linecap="round" stroke-width="3"></path>
+<!-- Animated glowing golden river -->
+<path class="light-trail" d="M 50 100 C 250 20, 350 180, 500 100 C 650 20, 750 180, 950 100" stroke="url(#goldGradientStroke)" stroke-linecap="round" stroke-width="4"></path>
+<defs>
+<lineargradient id="goldGradientStroke" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#3B82F6"></stop>
+<stop offset="50%" stop-color="#D6A84F"></stop>
+<stop offset="100%" stop-color="#F1D58A"></stop>
+</lineargradient>
+</defs>
+</svg>
+<!-- Dynamic Pulsing Nodes: DISCOVER -> INVEST -> GROW -->
+<div class="absolute inset-0 flex items-center justify-between px-6 sm:px-12 pointer-events-none">
+<!-- Node 1: DISCOVER -->
+<div class="flex flex-col items-center pointer-events-auto group cursor-pointer -translate-y-2">
+<div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-navy-card border border-white/20 p-1 shadow-[0_0_35px_rgba(59,130,246,0.3)] group-hover:border-electric group-hover:scale-110 transition-all duration-300 flex items-center justify-center">
+<span class="material-symbols-outlined text-electric text-[28px] sm:text-[32px]">travel_explore</span>
+</div>
+<span class="font-display font-bold text-sm sm:text-base text-white mt-4 tracking-wider uppercase">01. DISCOVER</span>
+<span class="text-xs text-slate-400 mt-1 max-w-[140px] text-center">Uncover aligned asset classes &amp; market signals.</span>
+</div>
+<!-- Node 2: INVEST -->
+<div class="flex flex-col items-center pointer-events-auto group cursor-pointer translate-y-4">
+<div class="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-gradient-to-br from-gold-light via-gold to-gold-dark p-[2px] shadow-[0_0_50px_rgba(214,168,79,0.5)] group-hover:scale-110 transition-all duration-300 flex items-center justify-center">
+<div class="w-full h-full rounded-[22px] bg-navy flex items-center justify-center">
+<span class="material-symbols-outlined text-gold text-[34px] sm:text-[40px]">token</span>
+</div>
+</div>
+<span class="font-display font-extrabold text-base sm:text-lg text-gold mt-4 tracking-wider uppercase">02. INVEST</span>
+<span class="text-xs text-slate-300 mt-1 max-w-[150px] text-center">Sub-millisecond direct CDSL execution.</span>
+</div>
+<!-- Node 3: GROW -->
+<div class="flex flex-col items-center pointer-events-auto group cursor-pointer -translate-y-2">
+<div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-navy-card border border-white/20 p-1 shadow-[0_0_35px_rgba(214,168,79,0.3)] group-hover:border-gold group-hover:scale-110 transition-all duration-300 flex items-center justify-center">
+<span class="material-symbols-outlined text-gold-light text-[28px] sm:text-[32px]">auto_graph</span>
+</div>
+<span class="font-display font-bold text-sm sm:text-base text-white mt-4 tracking-wider uppercase">03. GROW</span>
+<span class="text-xs text-slate-400 mt-1 max-w-[140px] text-center">Intergenerational compounding &amp; yields.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       4. SECTIONS 3 & 4 — FULL-SCREEN CONTINUOUS PRODUCT SHOWCASE & STAGE CONTROLLER
+       ========================================================================= -->
+<section class="relative w-full py-28 px-4 md:px-8 bg-midnight overflow-hidden" id="showcase">
+<!-- Huge Glow Spotlight -->
+<div class="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[650px] bg-gold/15 blur-[160px] rounded-full transition-all duration-700" id="stageGlow"></div>
+<div class="max-w-7xl mx-auto flex flex-col gap-12 relative z-10">
+<!-- Stage Header & Selector Tabs -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-white/10 pb-8">
+<div>
+<span class="text-xs font-bold tracking-[0.25em] text-gold uppercase">INTERACTIVE PRODUCT STAGE</span>
+<h2 class="font-display text-4xl sm:text-5xl font-extrabold text-white tracking-tight mt-1">
+            The Product Universe.
+          </h2>
+</div>
+<!-- 6 Step Product Controller -->
+<div class="flex items-center gap-1.5 p-1.5 rounded-2xl bg-navy/80 border border-white/10 backdrop-blur-xl overflow-x-auto max-w-full">
+<button class="product-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 bg-gold text-midnight shadow-[0_0_20px_rgba(214,168,79,0.5)]" id="btn-equity" onclick="setProduct('equity')">EQUITY</button>
+<button class="product-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 text-slate-300 hover:text-white" id="btn-mutual_funds" onclick="setProduct('mutual_funds')">MUTUAL FUNDS</button>
+<button class="product-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 text-slate-300 hover:text-white" id="btn-ipo" onclick="setProduct('ipo')">IPO</button>
+<button class="product-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 text-slate-300 hover:text-white" id="btn-bonds" onclick="setProduct('bonds')">BONDS</button>
+<button class="product-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 text-slate-300 hover:text-white" id="btn-etf" onclick="setProduct('etf')">ETF</button>
+<button class="product-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 text-slate-300 hover:text-white" id="btn-gold" onclick="setProduct('gold')">GOLD (SGB)</button>
+</div>
+</div>
+<!-- Cinema Product Stage Canvas -->
+<div class="min-h-[560px] rounded-3xl bg-gradient-to-b from-navy/90 to-midnight/90 border border-white/10 p-8 sm:p-12 lg:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden shadow-2xl">
+<!-- Dynamic Left Copy Area -->
+<div class="lg:w-1/2 flex flex-col gap-6 z-20">
+<div class="inline-flex items-center gap-2 self-start px-3.5 py-1 rounded-full bg-white/5 border border-white/10">
+<span class="text-[11px] font-bold text-gold tracking-widest uppercase" id="stageCategoryBadge">FOUNDATIONAL OWNERSHIP</span>
+</div>
+<!-- Massive 90-110px Dynamic Title -->
+<h3 class="font-display text-6xl sm:text-7xl lg:text-[96px] font-extrabold tracking-tighter text-white leading-none" id="stageTitle">
+            EQUITY
+          </h3>
+<p class="text-lg sm:text-xl text-slate-300 max-w-lg leading-relaxed" id="stageDescription">
+            Own a part of the businesses shaping tomorrow. Direct corporate participation, voting rights, and long-term compounding.
+          </p>
+<!-- Core Metrics Strip -->
+<div class="grid grid-cols-2 gap-6 pt-4 border-t border-white/10">
+<div>
+<span class="block text-[11px] text-slate-400 uppercase tracking-widest" id="stageMetric1Label">SETTLEMENT CYCLE</span>
+<span class="font-display text-xl sm:text-2xl font-bold text-white mt-0.5" id="stageMetric1Value">T+1 Direct CDSL</span>
+</div>
+<div>
+<span class="block text-[11px] text-slate-400 uppercase tracking-widest" id="stageMetric2Label">ACCOUNT MAINTENANCE</span>
+<span class="font-display text-xl sm:text-2xl font-bold text-gold mt-0.5" id="stageMetric2Value">Zero Recurring AMC</span>
+</div>
+</div>
+<!-- Direct Stage CTA -->
+<div class="pt-2">
+<a class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-gold via-gold-light to-gold text-midnight font-extrabold text-xs tracking-widest uppercase shadow-[0_10px_35px_rgba(214,168,79,0.4)] hover:scale-105 transition-all duration-300" href="#discovery" id="stageCTA">
+<span id="stageCTAText">EXPLORE EQUITY</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Dynamic Right 3D Visual Manifestation (Custom Kinetic Sculptures) -->
+<div class="lg:w-1/2 relative flex items-center justify-center min-h-[380px] sm:min-h-[460px] w-full">
+<!-- Container for dynamically swapped 3D kinetic token -->
+<div class="relative flex items-center justify-center transition-all duration-500 scale-100" id="stageVisualContainer">
+<!-- Default (EQUITY): Glowing Electric Blue & Gold Trajectory Sphere -->
+<div class="visual-node relative flex items-center justify-center animate-float-slow" id="visual-equity">
+<div class="w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-gradient-to-tr from-motiblue via-navy to-gold/40 p-[2px] shadow-[0_0_100px_rgba(21,94,239,0.6)]">
+<div class="w-full h-full rounded-full bg-midnight relative overflow-hidden flex items-center justify-center">
+<!-- Upward beam -->
+<div class="absolute inset-0 bg-gradient-to-t from-electric/30 via-transparent to-gold/30"></div>
+<div class="w-36 h-36 rounded-full border-2 border-gold/40 animate-ping opacity-30"></div>
+<span class="material-symbols-outlined text-gold text-[80px] drop-shadow-[0_0_30px_#D6A84F]">trending_up</span>
+</div>
+</div>
+<!-- Floating Orbital Ring -->
+<div class="absolute w-[360px] h-[360px] rounded-full border border-gold/40 [transform:rotateX(75deg)] animate-spin-slow pointer-events-none"></div>
+</div>
+<!-- MUTUAL FUNDS: Interconnected Constellation Sphere Network -->
+<div class="visual-node hidden relative flex items-center justify-center animate-float-slow" id="visual-mutual_funds">
+<div class="relative w-72 h-72 flex items-center justify-center">
+<div class="w-40 h-40 rounded-full bg-gradient-to-tr from-indigo-500 to-electric p-[2px] shadow-[0_0_80px_rgba(99,102,241,0.5)] flex items-center justify-center bg-midnight">
+<span class="material-symbols-outlined text-white text-[55px]">pie_chart</span>
+</div>
+<!-- Satellite Mini-Spheres -->
+<div class="absolute -top-4 -left-4 w-16 h-16 rounded-full bg-gold/20 border border-gold/50 flex items-center justify-center text-gold shadow-[0_0_20px_#D6A84F]">
+<span class="text-xs font-bold">SIP</span>
+</div>
+<div class="absolute bottom-2 -right-4 w-20 h-20 rounded-full bg-electric/20 border border-electric/50 flex items-center justify-center text-electric shadow-[0_0_20px_#3B82F6]">
+<span class="text-xs font-bold">INDEX</span>
+</div>
+<div class="absolute -bottom-6 left-12 w-14 h-14 rounded-full bg-purple-500/20 border border-purple-400/40 flex items-center justify-center text-purple-300">
+<span class="text-xs font-bold">FLEXI</span>
+</div>
+</div>
+</div>
+<!-- IPO: Emerging Architectural Gold Pyramid -->
+<div class="visual-node hidden relative flex items-center justify-center animate-float-slow" id="visual-ipo">
+<div class="w-64 h-64 sm:w-72 sm:h-72 rounded-3xl bg-gradient-to-br from-gold-light via-gold to-gold-dark p-[2px] [transform:rotate(45deg)] shadow-[0_0_100px_rgba(214,168,79,0.7)] flex items-center justify-center">
+<div class="w-full h-full rounded-[22px] bg-navy flex items-center justify-center">
+<div class="[transform:rotate(-45deg)] flex flex-col items-center">
+<span class="material-symbols-outlined text-gold text-[70px]">rocket_launch</span>
+<span class="font-display font-bold text-sm text-white tracking-widest mt-2">DAY ONE</span>
+</div>
+</div>
+</div>
+</div>
+<!-- BONDS: Monolithic Vertical Pillars with Yield Badges -->
+<div class="visual-node hidden relative flex items-end justify-center gap-4 h-72" id="visual-bonds">
+<div class="w-14 h-48 rounded-2xl bg-gradient-to-t from-navy-card to-emerald-500/40 border border-emerald-400/50 flex flex-col justify-end p-2 items-center shadow-[0_0_30px_rgba(16,185,129,0.3)]">
+<span class="text-[10px] text-emerald-300 font-bold">GOVT</span>
+</div>
+<div class="w-16 h-64 rounded-2xl bg-gradient-to-t from-navy-card to-gold/50 border border-gold/60 flex flex-col justify-end p-3 items-center shadow-[0_0_40px_rgba(214,168,79,0.4)]">
+<span class="text-xs text-gold font-bold">AAA YIELD</span>
+</div>
+<div class="w-14 h-40 rounded-2xl bg-gradient-to-t from-navy-card to-blue-500/40 border border-blue-400/50 flex flex-col justify-end p-2 items-center">
+<span class="text-[10px] text-blue-300 font-bold">CORP</span>
+</div>
+</div>
+<!-- ETF: Concentric Layered Crystalline Discs -->
+<div class="visual-node hidden relative flex items-center justify-center animate-float-slow" id="visual-etf">
+<div class="relative w-72 h-72 flex items-center justify-center">
+<div class="w-64 h-64 rounded-full border-2 border-electric/40 [transform:rotateX(65deg)] animate-spin-slow"></div>
+<div class="w-48 h-48 rounded-full border-2 border-gold/50 [transform:rotateX(65deg)] animate-spin-reverse-slow"></div>
+<div class="w-32 h-32 rounded-full bg-gradient-to-br from-electric to-motiblue flex items-center justify-center shadow-[0_0_50px_rgba(59,130,246,0.6)]">
+<span class="font-display font-extrabold text-xl text-white">NIFTY 50</span>
+</div>
+</div>
+</div>
+<!-- GOLD: Physical Lustrous Metallic Sphere -->
+<div class="visual-node hidden relative flex items-center justify-center animate-float-slow" id="visual-gold">
+<div class="w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-gradient-to-tr from-gold-dark via-gold-light to-gold p-[2px] shadow-[0_0_120px_rgba(214,168,79,0.8)]">
+<div class="w-full h-full rounded-full bg-gradient-to-b from-amber-400/20 to-midnight flex flex-col items-center justify-center relative">
+<div class="w-40 h-40 rounded-full border border-gold/50 animate-pulse"></div>
+<span class="material-symbols-outlined text-gold text-[75px] drop-shadow-[0_0_35px_#D6A84F] absolute">monetization_on</span>
+<span class="text-[11px] font-bold text-gold-light tracking-[0.25em] uppercase mt-24">SOVEREIGN GOLD</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       5. SECTION 5 — SMART DISCOVERY INTERACTIVE EXPERIENCE ("Not sure where to start?")
+       ========================================================================= -->
+<section class="relative w-full py-28 px-4 md:px-8 bg-gradient-to-b from-midnight via-navy to-midnight overflow-hidden" id="discovery">
+<!-- Ambient Radial Bloom -->
+<div class="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-motiblue/10 blur-[150px] rounded-full"></div>
+<div class="max-w-4xl mx-auto flex flex-col items-center text-center gap-8 relative z-10">
+<!-- Eyebrow & Title -->
+<span class="text-xs font-bold tracking-[0.3em] text-gold uppercase">INTELLIGENT EXPLORATION</span>
+<h2 class="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight">
+        Not sure where to start?
+      </h2>
+<p class="text-slate-300 text-base sm:text-lg max-w-xl">
+        Enter an objective, ticker, or time horizon. Our intuitive engine matches instruments directly to your intent.
+      </p>
+<!-- Glowing Search Box with Live Feedback -->
+<div class="w-full relative group mt-2">
+<div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-gold via-motiblue to-gold opacity-50 group-hover:opacity-100 blur-lg transition duration-500"></div>
+<div class="relative flex items-center bg-navy-card rounded-2xl p-2.5 sm:p-3 border border-white/20 shadow-2xl">
+<span class="material-symbols-outlined text-[26px] text-gold ml-3 mr-3">travel_explore</span>
+<input class="w-full bg-transparent border-none text-white placeholder:text-slate-400 focus:outline-none font-sans text-sm sm:text-base" id="discoverySearchInput" oninput="handleSearch(this.value)" placeholder="Search objectives (e.g. Wealth growth, Safe yields, Sovereign Gold, IPOs)..." type="text"/>
+<button class="px-6 py-3 rounded-xl bg-gradient-to-r from-gold to-gold-light text-midnight font-bold text-xs tracking-wider uppercase shrink-0 hover:scale-105 transition-all shadow-[0_0_20px_rgba(214,168,79,0.4)]" onclick="handleSearch(document.getElementById('discoverySearchInput').value || 'equity')" type="button">
+            SEARCH
+          </button>
+</div>
+</div>
+<!-- Quick Interactive Filter Chips -->
+<div class="flex flex-wrap items-center justify-center gap-2 pt-1">
+<span class="text-xs text-slate-400 uppercase tracking-widest mr-2 font-semibold">SUGGESTIONS:</span>
+<button class="chip-btn px-4 py-1.5 rounded-full bg-navy/80 border border-white/10 text-xs font-semibold text-slate-300 hover:text-gold hover:border-gold/50 transition-all" onclick="handleChipClick('Equity')">Equity</button>
+<button class="chip-btn px-4 py-1.5 rounded-full bg-navy/80 border border-white/10 text-xs font-semibold text-slate-300 hover:text-gold hover:border-gold/50 transition-all" onclick="handleChipClick('Mutual Funds')">Mutual Funds</button>
+<button class="chip-btn px-4 py-1.5 rounded-full bg-navy/80 border border-white/10 text-xs font-semibold text-slate-300 hover:text-gold hover:border-gold/50 transition-all" onclick="handleChipClick('IPO')">IPO Desk</button>
+<button class="chip-btn px-4 py-1.5 rounded-full bg-navy/80 border border-white/10 text-xs font-semibold text-slate-300 hover:text-gold hover:border-gold/50 transition-all" onclick="handleChipClick('Bonds')">Bonds</button>
+<button class="chip-btn px-4 py-1.5 rounded-full bg-navy/80 border border-white/10 text-xs font-semibold text-slate-300 hover:text-gold hover:border-gold/50 transition-all" onclick="handleChipClick('ETF')">Index ETFs</button>
+<button class="chip-btn px-4 py-1.5 rounded-full bg-navy/80 border border-white/10 text-xs font-semibold text-slate-300 hover:text-gold hover:border-gold/50 transition-all" onclick="handleChipClick('Gold Bonds')">Gold Bonds</button>
+</div>
+<!-- Live Reactive Discovery Card -->
+<div class="w-full mt-4 p-6 sm:p-8 rounded-3xl bg-navy-card/90 border border-gold/30 shadow-[0_20px_50px_rgba(0,0,0,0.6)] flex flex-col sm:flex-row items-center justify-between gap-6 transition-all duration-500" id="discoveryResultCard">
+<div class="flex items-center gap-4 text-left">
+<div class="w-14 h-14 rounded-2xl bg-gold/15 border border-gold/40 flex items-center justify-center text-gold shrink-0" id="discIconContainer">
+<span class="material-symbols-outlined text-[30px]" id="discIcon">trending_up</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-display text-lg font-bold text-white" id="discTitle">Direct Equities</span>
+<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 uppercase" id="discBadge">High Growth</span>
+</div>
+<p class="text-xs sm:text-sm text-slate-300 mt-1 max-w-md" id="discSubtitle">Best suited for multi-year wealth accumulation with NSE/BSE listed equities.</p>
+</div>
+</div>
+<div class="flex items-center gap-6 shrink-0 w-full sm:w-auto justify-between sm:justify-end border-t sm:border-t-0 pt-4 sm:pt-0 border-white/10">
+<div class="text-left sm:text-right">
+<span class="block text-[10px] text-slate-400 uppercase tracking-widest">HORIZON</span>
+<span class="font-display text-sm font-bold text-gold" id="discHorizon">5+ Years</span>
+</div>
+<a class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-motiblue to-electric text-white text-xs font-bold tracking-wider uppercase shadow-[0_0_20px_rgba(21,94,239,0.4)] hover:scale-105 transition-all" href="#showcase" id="discActionBtn">
+            VIEW DETAILS
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       6. SECTION 6 — GRAND FINALE CTA ("Your Investment Journey Starts Here.")
+       ========================================================================= -->
+<section class="relative w-full py-32 px-4 md:px-8 bg-midnight overflow-hidden">
+<!-- Giant Dramatic 3D Golden Orbital Ring In Motion -->
+<div class="pointer-events-none absolute inset-0 flex items-center justify-center opacity-40">
+<div class="w-[750px] h-[750px] sm:w-[950px] sm:h-[950px] rounded-full border border-gold/30 border-dashed animate-spin-orbital [transform:rotateX(74deg)_rotateY(10deg)] shadow-[0_0_120px_rgba(214,168,79,0.3)]"></div>
+<div class="w-[500px] h-[500px] sm:w-[650px] sm:h-[650px] rounded-full border border-electric/30 animate-spin-reverse-slow [transform:rotateX(68deg)_rotateY(-12deg)]"></div>
+</div>
+<div class="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-gold/15 blur-[160px] rounded-full"></div>
+<div class="max-w-4xl mx-auto rounded-3xl bg-gradient-to-b from-navy-card/90 via-navy/90 to-midnight/90 border border-gold/40 p-10 sm:p-16 md:p-20 relative z-10 shadow-[0_0_80px_rgba(214,168,79,0.25)] flex flex-col items-center text-center gap-8">
+<!-- Central Golden Motisons Emblem -->
+<div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-gold-light via-gold to-gold-dark p-[2px] shadow-[0_0_50px_rgba(214,168,79,0.6)] animate-float-slow">
+<div class="w-full h-full rounded-[14px] bg-midnight flex items-center justify-center">
+<span class="font-serif text-3xl font-bold text-gold">M</span>
+</div>
+</div>
+<!-- Headline -->
+<h2 class="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight max-w-2xl">
+        Your Investment Journey <span class="gold-gradient">Starts Here.</span>
+</h2>
+<!-- Subtitle -->
+<p class="text-slate-300 text-base sm:text-lg max-w-lg leading-relaxed">
+        Explore a simpler way to discover and invest. Join thousands of investors powered by Motisons heritage.
+      </p>
+<!-- Dual High Impact CTAs -->
+<div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+<a class="px-8 py-4 rounded-xl bg-gradient-to-r from-motiblue via-electric to-motiblue text-white font-extrabold text-xs tracking-widest uppercase flex items-center gap-3 shadow-[0_12px_40px_rgba(21,94,239,0.5)] hover:shadow-[0_12px_45px_rgba(214,168,79,0.5)] hover:from-gold hover:to-gold-light hover:text-midnight transition-all duration-300" href="#showcase">
+<span>EXPLORE INVESTMENTS</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="px-8 py-4 rounded-xl bg-navy/80 hover:bg-navy-card text-white font-extrabold text-xs tracking-widest uppercase flex items-center gap-2 border border-gold/40 hover:border-gold transition-all duration-300" href="#">
+<span>OPEN ACCOUNT</span>
+<span class="material-symbols-outlined text-[16px] text-gold">north_east</span>
+</a>
+</div>
+<!-- Micro Trust Pill -->
+<div class="flex items-center gap-4 text-[11px] text-slate-400 tracking-wider uppercase pt-4 border-t border-white/10 w-full justify-center">
+<span>PAPERLESS 5-MIN KYC</span>
+<span>•</span>
+<span>ZERO AMC DEMAT</span>
+<span>•</span>
+<span>DIRECT CDSL DEPOSITORY</span>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       7. MINIMALIST REGULATORY FOOTER
+       ========================================================================= -->
+<footer class="w-full bg-midnight border-t border-white/10 text-slate-400 py-16 px-4 md:px-8" id="footer">
+<div class="max-w-7xl mx-auto flex flex-col gap-10">
+<!-- Top Row: Logo & Quick Links -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-8 border-b border-white/10">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-gold/20 border border-gold/40 flex items-center justify-center">
+<span class="font-serif text-lg font-bold text-gold">M</span>
+</div>
+<div>
+<span class="font-display text-sm font-bold text-white tracking-widest uppercase">MOTISONS SHARES</span>
+<span class="block text-[10px] text-gold tracking-widest uppercase">Wealth Governance Since 2007</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-6 text-xs text-slate-300">
+<a class="hover:text-gold transition-colors" href="#">Products</a>
+<a class="hover:text-gold transition-colors" href="#">Research &amp; Advisory</a>
+<a class="hover:text-gold transition-colors" href="#">Investor Charter</a>
+<a class="hover:text-gold transition-colors" href="#">Risk Disclosure</a>
+<a class="hover:text-gold transition-colors" href="#">Grievances</a>
+</div>
+</div>
+<!-- Middle Row: SEBI & Depository Certifications -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-400">
+<div class="p-4 rounded-xl bg-navy/60 border border-white/5">
+<span class="block text-[10px] font-bold text-gold uppercase tracking-wider mb-1">REGISTRATION DETAILS</span>
+<p>SEBI Stock Broker: INZ000289135</p>
+<p>NSE Member: 13327 | BSE: 3266 | MCX: 56430</p>
+<p>CIN: U67120RJ2007PTC024584</p>
+</div>
+<div class="p-4 rounded-xl bg-navy/60 border border-white/5">
+<span class="block text-[10px] font-bold text-gold uppercase tracking-wider mb-1">DEPOSITORY PARTICIPANT</span>
+<p>CDSL DP ID: 12068500</p>
+<p>SEBI DP Reg: IN-DP-CDSL-592-2021</p>
+<p>AMFI Registered ARN: 104289</p>
+</div>
+<div class="p-4 rounded-xl bg-navy/60 border border-white/5">
+<span class="block text-[10px] font-bold text-gold uppercase tracking-wider mb-1">REGISTERED OFFICE</span>
+<p>Motisons Shares &amp; Stocks Pvt. Ltd.</p>
+<p>2nd Floor, Motisons Tower, SB-110, Lalkothi,</p>
+<p>Tonk Road, Jaipur, Rajasthan - 302015</p>
+</div>
+</div>
+<!-- Bottom Disclaimer & Copyright -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-white/5 text-[11px] text-slate-500">
+<p>© 2025 Motisons Shares &amp; Stocks Pvt. Ltd. All rights reserved. Securities investments are subject to market risks.</p>
+<div class="flex items-center gap-4">
+<a class="hover:text-slate-300 transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-slate-300 transition-colors" href="#">Terms of Use</a>
+<a class="hover:text-slate-300 transition-colors" href="#">SEBI SCORES</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- =========================================================================
+       DYNAMIC CLIENT SCRIPT: PRODUCT STAGE MORPHING & SMART DISCOVERY ENGINE
+       ========================================================================= -->
+<script>
+    // Product Stage Data Dictionary
+    const productData = {
+      equity: {
+        category: "FOUNDATIONAL OWNERSHIP",
+        title: "EQUITY",
+        description: "Own a part of the businesses shaping tomorrow. Direct corporate participation, voting rights, and long-term compounding.",
+        metric1Label: "SETTLEMENT CYCLE",
+        metric1Val: "T+1 Direct CDSL",
+        metric2Label: "ACCOUNT MAINTENANCE",
+        metric2Val: "Zero Recurring AMC",
+        ctaText: "EXPLORE EQUITY",
+        glowColor: "rgba(21, 94, 239, 0.2)"
+      },
+      mutual_funds: {
+        category: "DISCIPLINED WEALTH BASKETS",
+        title: "MUTUAL FUNDS",
+        description: "Compound with disciplined, expert-curated portfolios. 38+ top AMCs with zero commission direct investment plans.",
+        metric1Label: "INVESTMENT FREQUENCY",
+        metric1Val: "Flexible SIP / Lumpsum",
+        metric2Label: "MANAGED BY",
+        metric2Val: "Certified Fund Managers",
+        ctaText: "DISCOVER MUTUAL FUNDS",
+        glowColor: "rgba(99, 102, 241, 0.25)"
+      },
+      ipo: {
+        category: "PRIMARY MARKET ACCESS",
+        title: "IPO DESK",
+        description: "Access mainline public offerings and primary syndications with streamlined 3-click UPI application protocol.",
+        metric1Label: "APPLICATION PROCESS",
+        metric1Val: "Seamless UPI Mandate",
+        metric2Label: "ALLOTMENT STATUS",
+        metric2Val: "Real-time Notification",
+        ctaText: "EXPLORE CURRENT IPOS",
+        glowColor: "rgba(214, 168, 79, 0.3)"
+      },
+      bonds: {
+        category: "CAPITAL PRESERVATION",
+        title: "BONDS & YIELD",
+        description: "Preserve wealth with fixed sovereign and corporate yields. Predictable semi-annual cashflow backed by high-grade credit.",
+        metric1Label: "AVERAGE COUPON",
+        metric1Val: "7.8% - 10.2% p.a.",
+        metric2Label: "SECURITY BACKING",
+        metric2Val: "Sovereign & AAA Rated",
+        ctaText: "DISCOVER BOND CATALOG",
+        glowColor: "rgba(16, 185, 129, 0.2)"
+      },
+      etf: {
+        category: "LIQUID BENCHMARK TRACKING",
+        title: "INDEX ETFs",
+        description: "Low-cost, real-time exposure to broad market indices with continuous intraday exchange fluidity.",
+        metric1Label: "EXPENSE RATIO",
+        metric1Val: "As low as 0.04%",
+        metric2Label: "LIQUIDITY",
+        metric2Val: "Intraday Instant",
+        ctaText: "EXPLORE INDEX ETFS",
+        glowColor: "rgba(59, 130, 246, 0.25)"
+      },
+      gold: {
+        category: "SOVEREIGN VALUE PRESERVATION",
+        title: "GOLD & SGB",
+        description: "Hedge against inflation with Sovereign Gold Bonds offering 2.5% RBI annual interest and zero capital gains tax at maturity.",
+        metric1Label: "ADDITIONAL INTEREST",
+        metric1Val: "2.5% p.a. RBI Coupon",
+        metric2Label: "CAPITAL GAINS TAX",
+        metric2Val: "100% Exempt At Maturity",
+        ctaText: "EXPLORE SGB TRANCHES",
+        glowColor: "rgba(214, 168, 79, 0.35)"
+      }
+    };
+
+    function setProduct(key) {
+      const p = productData[key];
+      if (!p) return;
+
+      // Update Tab Styles
+      document.querySelectorAll('.product-tab').forEach(btn => {
+        btn.classList.remove('bg-gold', 'text-midnight', 'shadow-[0_0_20px_rgba(214,168,79,0.5)]');
+        btn.classList.add('text-slate-300');
+      });
+      const activeBtn = document.getElementById(`btn-${key}`);
+      if (activeBtn) {
+        activeBtn.classList.add('bg-gold', 'text-midnight', 'shadow-[0_0_20px_rgba(214,168,79,0.5)]');
+        activeBtn.classList.remove('text-slate-300');
+      }
+
+      // Update Text Content with subtle fade
+      const titleElem = document.getElementById('stageTitle');
+      titleElem.style.opacity = '0';
+      titleElem.style.transform = 'translateY(10px)';
+      
+      setTimeout(() => {
+        document.getElementById('stageCategoryBadge').innerText = p.category;
+        titleElem.innerText = p.title;
+        document.getElementById('stageDescription').innerText = p.description;
+        document.getElementById('stageMetric1Label').innerText = p.metric1Label;
+        document.getElementById('stageMetric1Value').innerText = p.metric1Val;
+        document.getElementById('stageMetric2Label').innerText = p.metric2Label;
+        document.getElementById('stageMetric2Value').innerText = p.metric2Val;
+        document.getElementById('stageCTAText').innerText = p.ctaText;
+        
+        // Update Glow Color
+        document.getElementById('stageGlow').style.backgroundColor = p.glowColor;
+
+        titleElem.style.opacity = '1';
+        titleElem.style.transform = 'translateY(0px)';
+      }, 150);
+
+      // Hide all visuals, reveal targeted visual
+      document.querySelectorAll('.visual-node').forEach(node => {
+        node.classList.add('hidden');
+      });
+      const targetVisual = document.getElementById(`visual-${key}`);
+      if (targetVisual) {
+        targetVisual.classList.remove('hidden');
+      }
+    }
+
+    // Smart Discovery Reactive Simulation
+    const discoveryMap = {
+      'equity': {
+        title: 'Direct Equities',
+        badge: 'High Growth',
+        badgeClass: 'bg-emerald-500/20 text-emerald-400',
+        subtitle: 'Optimal for multi-year capital compounding with premier listed NSE/BSE enterprises.',
+        horizon: '5+ Years',
+        icon: 'trending_up',
+        targetKey: 'equity'
+      },
+      'mutual funds': {
+        title: 'Curated Mutual Funds',
+        badge: 'Balanced Growth',
+        badgeClass: 'bg-indigo-500/20 text-indigo-300',
+        subtitle: 'Systematic compounding through expert-allocated diversified stock baskets.',
+        horizon: '3 - 5 Years',
+        icon: 'donut_large',
+        targetKey: 'mutual_funds'
+      },
+      'ipo': {
+        title: 'IPO Syndications',
+        badge: 'Event Driven',
+        badgeClass: 'bg-gold/20 text-gold',
+        subtitle: 'Day-one participation in landmark enterprise listings and market issuances.',
+        horizon: 'Short / Listing',
+        icon: 'rocket_launch',
+        targetKey: 'ipo'
+      },
+      'bonds': {
+        title: 'Sovereign & Corporate Bonds',
+        badge: 'Preservation',
+        badgeClass: 'bg-teal-500/20 text-teal-300',
+        subtitle: 'Contractual bi-annual coupon yields with zero market sentiment volatility.',
+        horizon: '2 - 7 Years',
+        icon: 'shield',
+        targetKey: 'bonds'
+      },
+      'etf': {
+        title: 'Index Exchange Traded Funds',
+        badge: 'Liquid Benchmark',
+        badgeClass: 'bg-blue-500/20 text-blue-300',
+        subtitle: 'Low-cost passive tracking of Nifty 50, Sensex, and thematic sector indices.',
+        horizon: '1 - 3 Years',
+        icon: 'swap_horiz',
+        targetKey: 'etf'
+      },
+      'gold': {
+        title: 'Sovereign Gold Bonds (SGB)',
+        badge: 'Sovereign Hedge',
+        badgeClass: 'bg-amber-500/20 text-amber-300',
+        subtitle: 'RBI-backed 2.5% yearly yield plus global gold price appreciation with tax exemptions.',
+        horizon: '8 Years (Maturity)',
+        icon: 'monetization_on',
+        targetKey: 'gold'
+      }
+    };
+
+    function handleSearch(query) {
+      const q = query.toLowerCase().trim();
+      let match = 'equity';
+
+      if (q.includes('gold') || q.includes('sgb') || q.includes('sovereign')) {
+        match = 'gold';
+      } else if (q.includes('mutual') || q.includes('sip') || q.includes('fund')) {
+        match = 'mutual funds';
+      } else if (q.includes('ipo') || q.includes('listing') || q.includes('syndicate')) {
+        match = 'ipo';
+      } else if (q.includes('bond') || q.includes('yield') || q.includes('debt') || q.includes('safe')) {
+        match = 'bonds';
+      } else if (q.includes('etf') || q.includes('index') || q.includes('nifty')) {
+        match = 'etf';
+      } else {
+        match = 'equity';
+      }
+
+      applyDiscoveryResult(discoveryMap[match]);
+    }
+
+    function handleChipClick(name) {
+      document.getElementById('discoverySearchInput').value = name;
+      handleSearch(name);
+    }
+
+    function applyDiscoveryResult(data) {
+      const card = document.getElementById('discoveryResultCard');
+      card.style.opacity = '0.5';
+      card.style.transform = 'scale(0.98)';
+
+      setTimeout(() => {
+        document.getElementById('discTitle').innerText = data.title;
+        document.getElementById('discBadge').innerText = data.badge;
+        document.getElementById('discSubtitle').innerText = data.subtitle;
+        document.getElementById('discHorizon').innerText = data.horizon;
+        document.getElementById('discIcon').innerText = data.icon;
+        
+        const actionBtn = document.getElementById('discActionBtn');
+        actionBtn.onclick = () => {
+          setProduct(data.targetKey);
+          document.getElementById('showcase').scrollIntoView({behavior: 'smooth'});
+        };
+
+        card.style.opacity = '1';
+        card.style.transform = 'scale(1)';
+      }, 150);
+    }
+  </script>
+<!-- Global Prototype Switcher -->
+<script src="switcher.js"></script>
+</body></html>

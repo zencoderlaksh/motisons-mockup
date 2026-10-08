@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Motisons Shares — Invest Smarter. Build Wealth with Confidence.</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:ital,wght@0,500;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "midnight-abyss": "#050B16",
+            "midnight-deep": "#081426",
+            "midnight-card": "#0D1B33",
+            "midnight-border": "rgba(214, 168, 79, 0.18)",
+            motisons: "#155EEF",
+            "electric-blue": "#3B82F6",
+            gold: "#D6A84F",
+            "gold-champagne": "#F1D58A",
+            "gold-soft": "#B88A32",
+            "off-white": "#F8FAFC",
+            "text-muted": "#94A3B8"
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            serif: ['Cinzel', 'serif']
+          }
+        }
+      }
+    };
+</script>
+<style>
+    body {
+      background-color: #050B16;
+      color: #F8FAFC;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #F1D58A 0%, #D6A84F 50%, #B88A32 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-glow-orb {
+      box-shadow: 0 0 120px 40px rgba(214, 168, 79, 0.12);
+    }
+    .blue-glow-orb {
+      box-shadow: 0 0 140px 50px rgba(21, 94, 239, 0.18);
+    }
+    .gold-border-glow {
+      box-shadow: 0 0 40px -10px rgba(214, 168, 79, 0.22);
+    }
+    .luxury-panel {
+      background: linear-gradient(145deg, rgba(13, 27, 51, 0.72) 0%, rgba(8, 20, 38, 0.6) 100%);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .luxury-panel:hover {
+      border-color: rgba(214, 168, 79, 0.38);
+      box-shadow: 0 15px 45px -10px rgba(214, 168, 79, 0.12);
+    }
+    .metallic-gold-btn {
+      background: linear-gradient(135deg, #F1D58A 0%, #D6A84F 50%, #B88A32 100%);
+      color: #050B16;
+    }
+    .metallic-gold-btn:hover {
+      background: linear-gradient(135deg, #FFFFFF 0%, #F1D58A 45%, #D6A84F 100%);
+      box-shadow: 0 0 30px rgba(214, 168, 79, 0.45);
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #050B16;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1A2E4E;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #D6A84F;
+    }
+</style>
+</head>
+<body class="bg-midnight-abyss text-off-white antialiased selection:bg-gold/30 selection:text-gold-champagne">
+<!-- 1. STICKY LUXURY NAVIGATION -->
+<header class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-10 py-4 transition-all duration-300">
+<div class="max-w-7xl mx-auto bg-midnight-abyss/85 backdrop-blur-2xl border border-white/10 hover:border-gold/30 rounded-2xl px-6 py-3.5 transition-all shadow-2xl flex items-center justify-between">
+<!-- Brand Monogram & Name -->
+<a class="flex items-center gap-3.5 group" href="index.html" title="Back to Motisons Prototype Hub">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold-champagne via-gold to-gold-soft flex items-center justify-center p-[1px] shadow-lg shadow-gold/20">
+<div class="w-full h-full bg-midnight-abyss rounded-[11px] flex items-center justify-center">
+<span class="font-serif font-bold text-lg text-gold group-hover:scale-105 transition-transform">M</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="text-white font-bold tracking-tight text-lg leading-tight flex items-center gap-2">
+          MOTISONS <span class="text-gold font-light text-[10px] px-1.5 py-0.5 rounded border border-gold/30 uppercase tracking-widest hidden sm:inline-block">SHARES</span>
+</span>
+<span class="text-[9px] text-text-muted tracking-widest uppercase font-medium">Wealth &amp; Capital Markets</span>
+</div>
+</a>
+<!-- Clean Luxury Nav Items -->
+<nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-text-muted">
+<a class="hover:text-gold-champagne transition-colors" href="#services">Products</a>
+<a class="hover:text-gold-champagne transition-colors" href="#experience">Invest</a>
+<a class="hover:text-gold-champagne transition-colors" href="#markets">Markets</a>
+<a class="hover:text-gold-champagne transition-colors" href="#platform">Experience</a>
+<a class="hover:text-gold-champagne transition-colors" href="#heritage">Heritage</a>
+<a class="hover:text-gold-champagne transition-colors" href="#insights">Insights</a>
+</nav>
+<!-- Right Luxury Action -->
+<div class="flex items-center gap-4">
+<a class="hidden sm:inline-flex text-xs font-semibold uppercase tracking-widest text-text-muted hover:text-gold transition-colors" href="#">
+        Login
+      </a>
+<a class="relative group overflow-hidden rounded-xl bg-motisons hover:bg-electric-blue px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-xl shadow-motisons/20 transition-all flex items-center gap-2 border border-white/20 hover:border-gold" href="#open-account">
+<span class="relative z-10">OPEN ACCOUNT</span>
+<span class="material-symbols-outlined text-sm relative z-10 transition-transform group-hover:translate-x-1">arrow_forward</span>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-gold/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+</a>
+</div>
+</div>
+</header>
+<main class="w-full pt-28">
+<!-- HERO SECTION: 70% VISUAL LUXURY FINTECH -->
+<section class="relative min-h-[92vh] flex items-center overflow-hidden py-16 lg:py-24">
+<!-- Atmospheric Ambient Lighting & Glows -->
+<div class="absolute top-1/4 -left-20 w-[600px] h-[600px] bg-motisons/15 rounded-full blur-[170px] pointer-events-none -z-10"></div>
+<div class="absolute bottom-10 right-0 w-[680px] h-[680px] bg-gold/15 rounded-full blur-[190px] pointer-events-none -z-10"></div>
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-midnight-deep/40 via-midnight-abyss to-midnight-abyss pointer-events-none -z-20"></div>
+<div class="max-w-7xl mx-auto px-6 lg:px-10 w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+<!-- Hero Typography & Direct CTAs -->
+<div class="lg:col-span-7 flex flex-col gap-8">
+<div class="inline-flex items-center gap-2.5 bg-midnight-card/90 border border-gold/40 px-4 py-1.5 rounded-full w-fit backdrop-blur-md">
+<span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+<span class="text-xs font-semibold text-gold-champagne tracking-wider uppercase">
+              20+ Years of Financial Experience • SEBI Registered
+            </span>
+</div>
+<!-- Oversized Headline (80-96px desktop) -->
+<h1 class="text-5xl sm:text-7xl lg:text-[88px] font-extrabold tracking-tight leading-[1.04] text-white">
+            Invest Smarter.<br/>
+            Build Wealth with <span class="gold-gradient-text">Confidence.</span>
+</h1>
+<p class="text-lg sm:text-xl text-text-muted max-w-xl font-normal leading-relaxed">
+            One powerful financial ecosystem for investing, trading and capital preservation — engineered with institutional clarity.
+          </p>
+<!-- Dual CTAs -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="relative group inline-flex items-center gap-3 px-9 py-4 rounded-xl bg-motisons hover:bg-electric-blue text-white font-bold text-sm tracking-wide shadow-2xl transition-all border border-white/20 hover:border-gold" href="#open-account">
+<span>Open Account</span>
+<span class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">arrow_forward</span>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-gold/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+</a>
+<a class="inline-flex items-center gap-2 px-8 py-4 rounded-xl luxury-panel text-white hover:text-gold font-semibold text-sm transition-all" href="#services">
+<span>Explore Ecosystem</span>
+<span class="material-symbols-outlined text-base">expand_more</span>
+</a>
+</div>
+<!-- Subtle Trust Marks -->
+<div class="flex items-center gap-6 pt-4 text-xs text-text-muted">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-gold text-base">verified</span> Zero AMC Year 1</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-gold text-base">fingerprint</span> Instant e-KYC</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-gold text-base">shield</span> CDSL Depository</span>
+</div>
+</div>
+<!-- Right Column: 3D Composition with Glowing Orbital Rings & Luxury Floating Elements -->
+<div class="lg:col-span-5 relative flex justify-center items-center">
+<!-- Concentric Glowing Gold Orbital Rings -->
+<div class="absolute -inset-16 flex items-center justify-center pointer-events-none">
+<svg class="w-full h-full text-gold" fill="none" viewbox="0 0 540 540">
+<circle cx="270" cy="270" opacity="0.18" r="240" stroke="currentColor" stroke-dasharray="3 9" stroke-width="1"></circle>
+<circle cx="270" cy="270" opacity="0.25" r="185" stroke="#155EEF" stroke-dasharray="5 6" stroke-width="1.2"></circle>
+<circle cx="270" cy="270" opacity="0.35" r="130" stroke="url(#luxury-gold-ring)" stroke-width="1.5"></circle>
+<path d="M 60 380 C 180 360, 240 190, 480 110" stroke="url(#wealth-trajectory)" stroke-linecap="round" stroke-width="3"></path>
+<defs>
+<lineargradient id="wealth-trajectory" x1="0" x2="1" y1="1" y2="0">
+<stop offset="0%" stop-color="#155EEF"></stop>
+<stop offset="60%" stop-color="#3B82F6"></stop>
+<stop offset="100%" stop-color="#D6A84F"></stop>
+</lineargradient>
+<lineargradient id="luxury-gold-ring" x1="0" x2="1" y1="0" y2="1">
+<stop offset="0%" stop-color="#F1D58A"></stop>
+<stop offset="100%" stop-color="#B88A32"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+<!-- Floating Asset Indicator 1: Direct Equity -->
+<div class="absolute -top-4 -left-6 z-20 luxury-panel p-3.5 rounded-2xl shadow-2xl flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-motisons/30 border border-motisons/40 flex items-center justify-center text-electric-blue">
+<span class="material-symbols-outlined text-xl">show_chart</span>
+</div>
+<div>
+<p class="text-xs font-semibold text-white">Direct Equity</p>
+<p class="text-[11px] text-emerald-400 font-medium">+22.4% Annualized</p>
+</div>
+</div>
+<!-- Floating Asset Indicator 2: Sovereign Gold Bonds -->
+<div class="absolute top-24 -right-8 z-20 luxury-panel p-3.5 rounded-2xl border-gold/40 shadow-2xl flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-gold/20 border border-gold/40 flex items-center justify-center text-gold">
+<span class="material-symbols-outlined text-xl">monetization_on</span>
+</div>
+<div>
+<p class="text-xs font-semibold text-white">Sovereign Gold Bonds</p>
+<p class="text-[11px] text-gold-champagne font-medium">2.5% Tax-Free Yield</p>
+</div>
+</div>
+<!-- Floating Asset Indicator 3: CDSL & DigiLocker -->
+<div class="absolute -bottom-4 right-2 z-20 luxury-panel px-4 py-2 rounded-xl flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span class="text-xs font-medium text-white">CDSL Custody Protected</span>
+</div>
+<!-- Center Realistic Luxury Glass Portfolio Frame -->
+<div class="relative w-80 rounded-[38px] bg-gradient-to-b from-white/20 via-gold/15 to-white/10 p-[1.5px] shadow-2xl gold-border-glow">
+<div class="w-full bg-midnight-deep rounded-[36px] p-6 overflow-hidden flex flex-col gap-5 border border-midnight-card">
+<!-- Top Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-gold/20 border border-gold/40 flex items-center justify-center text-gold font-serif font-bold text-xs">M</div>
+<span class="text-xs font-bold tracking-wide text-white">Motisons Portfolio</span>
+</div>
+<span class="text-[10px] bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-full border border-emerald-500/30">Live Sync</span>
+</div>
+<!-- Consolidated Net Worth Glass Block -->
+<div class="bg-gradient-to-br from-midnight-card to-midnight-abyss rounded-2xl p-5 border border-white/10 flex flex-col gap-1.5">
+<span class="text-[10px] uppercase tracking-widest text-text-muted font-semibold">Consolidated Portfolio</span>
+<div class="text-3xl font-extrabold text-white tracking-tight">₹18,45,200<span class="text-gold text-lg">.80</span></div>
+<div class="flex items-center justify-between pt-2 border-t border-white/5 mt-1">
+<span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span> +₹3,24,180 (21.4%)
+                  </span>
+<span class="text-[10px] text-text-muted">FY 2025-26</span>
+</div>
+</div>
+<!-- Clean Sleek Allocation Visual -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between text-[11px] text-text-muted">
+<span>Asset Distribution</span>
+<span class="text-gold font-medium">Optimal Balance</span>
+</div>
+<div class="w-full h-2 bg-midnight-abyss rounded-full overflow-hidden flex">
+<div class="h-full bg-electric-blue w-[52%]"></div>
+<div class="h-full bg-gold w-[28%]"></div>
+<div class="h-full bg-emerald-400 w-[20%]"></div>
+</div>
+<div class="grid grid-cols-3 gap-1 pt-1 text-center">
+<div class="p-1.5 rounded-lg bg-white/5">
+<p class="text-[9px] text-text-muted uppercase">Equity</p>
+<p class="text-[11px] font-bold text-white">52%</p>
+</div>
+<div class="p-1.5 rounded-lg bg-white/5">
+<p class="text-[9px] text-text-muted uppercase">Gold Bonds</p>
+<p class="text-[11px] font-bold text-gold">28%</p>
+</div>
+<div class="p-1.5 rounded-lg bg-white/5">
+<p class="text-[9px] text-text-muted uppercase">Funds</p>
+<p class="text-[11px] font-bold text-white">20%</p>
+</div>
+</div>
+</div>
+<!-- High-conviction Holdings Micro Item -->
+<div class="p-3 rounded-xl bg-white/5 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-lg bg-gold/20 flex items-center justify-center text-gold">
+<span class="material-symbols-outlined text-sm">workspace_premium</span>
+</div>
+<div>
+<p class="text-xs font-semibold text-white">SGB Tranche VI</p>
+<p class="text-[10px] text-text-muted">Guaranteed Sovereign</p>
+</div>
+</div>
+<span class="text-xs font-bold text-gold-champagne">+14.6%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. SUBTLE MARKET STRIP (<60px height) -->
+<section class="h-14 border-y border-white/10 bg-midnight-abyss/90 flex items-center overflow-x-auto no-scrollbar" id="markets">
+<div class="max-w-7xl mx-auto px-6 w-full flex items-center justify-between gap-8 text-xs whitespace-nowrap">
+<div class="flex items-center gap-2 text-text-muted">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+<span class="font-bold uppercase tracking-wider text-white">NSE Live:</span>
+</div>
+<div class="flex items-center gap-8 divide-x divide-white/10">
+<!-- NIFTY -->
+<div class="flex items-center gap-3 pl-4">
+<span class="text-text-muted font-medium">NIFTY 50</span>
+<span class="font-bold text-white">24,852.15</span>
+<span class="text-emerald-400 font-semibold flex items-center text-[11px]">
+<span class="material-symbols-outlined text-xs">arrow_drop_up</span>+0.58%
+          </span>
+<svg class="w-16 h-4 text-emerald-400 opacity-80" fill="none" viewbox="0 0 60 16">
+<path d="M0 12 L 15 10 L 30 11 L 45 4 L 60 2" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path>
+</svg>
+</div>
+<!-- SENSEX -->
+<div class="flex items-center gap-3 pl-8">
+<span class="text-text-muted font-medium">SENSEX</span>
+<span class="font-bold text-white">81,698.40</span>
+<span class="text-emerald-400 font-semibold flex items-center text-[11px]">
+<span class="material-symbols-outlined text-xs">arrow_drop_up</span>+0.52%
+          </span>
+<svg class="w-16 h-4 text-emerald-400 opacity-80" fill="none" viewbox="0 0 60 16">
+<path d="M0 13 L 20 10 L 35 9 L 48 3 L 60 1" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path>
+</svg>
+</div>
+<!-- BANK NIFTY -->
+<div class="flex items-center gap-3 pl-8">
+<span class="text-text-muted font-medium">BANK NIFTY</span>
+<span class="font-bold text-white">51,210.60</span>
+<span class="text-rose-400 font-semibold flex items-center text-[11px]">
+<span class="material-symbols-outlined text-xs">arrow_drop_down</span>-0.17%
+          </span>
+<svg class="w-16 h-4 text-rose-400 opacity-80" fill="none" viewbox="0 0 60 16">
+<path d="M0 3 L 20 5 L 35 11 L 48 9 L 60 14" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path>
+</svg>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-2 text-[11px] text-text-muted">
+<span class="material-symbols-outlined text-sm text-gold">lock</span>
+<span>SEBI / CDSL Regulated Participant</span>
+</div>
+</div>
+</section>
+<!-- 2. MINIMAL TRUST HORIZONTAL STATEMENT (NO 5 BIG CARDS) -->
+<section class="py-20 lg:py-24 border-b border-white/5 relative">
+<div class="max-w-6xl mx-auto px-6 text-center flex flex-col items-center gap-6">
+<div class="flex flex-wrap items-center justify-center gap-6 sm:gap-12 text-sm sm:text-base font-semibold text-white tracking-wide">
+<span class="flex items-center gap-2">
+<strong class="text-2xl sm:text-3xl font-extrabold text-gold font-serif">20+</strong>
+<span class="text-text-muted uppercase text-xs tracking-widest font-normal">Years of Financial Experience</span>
+</span>
+<span class="w-1.5 h-1.5 rounded-full bg-gold/50 hidden sm:inline-block"></span>
+<span class="flex items-center gap-2">
+<strong class="text-2xl sm:text-3xl font-extrabold text-white font-serif">70K+</strong>
+<span class="text-text-muted uppercase text-xs tracking-widest font-normal">Active Clients</span>
+</span>
+<span class="w-1.5 h-1.5 rounded-full bg-gold/50 hidden sm:inline-block"></span>
+<span class="flex items-center gap-2">
+<strong class="text-2xl sm:text-3xl font-extrabold text-gold font-serif">100+</strong>
+<span class="text-text-muted uppercase text-xs tracking-widest font-normal">Market Professionals</span>
+</span>
+</div>
+<p class="font-serif italic text-lg sm:text-xl text-gold-champagne tracking-wide">
+        "Built on experience. Designed for what's next."
+      </p>
+</div>
+</section>
+<!-- 3. CORE EDITORIAL MESSAGE (3 CONCEPTS WITH OVERSIZED GOLD NUMERALS) -->
+<section class="py-28 lg:py-36 relative">
+<div class="max-w-7xl mx-auto px-6 lg:px-10">
+<div class="max-w-3xl mb-20">
+<span class="text-xs font-bold uppercase tracking-widest text-gold flex items-center gap-2 mb-3">
+<span class="w-6 h-[1px] bg-gold"></span>
+          PHILOSOPHY
+        </span>
+<!-- Huge Editorial Headline -->
+<h2 class="text-4xl sm:text-6xl lg:text-[72px] font-extrabold text-white tracking-tight leading-[1.08]">
+          One Platform.<br/>Every Investment Journey.
+        </h2>
+</div>
+<!-- 3 Concepts Connected with Delicate Gold Lines -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+<!-- Connecting Line Background for Desktop -->
+<div class="hidden md:block absolute top-16 left-16 right-16 h-[1px] bg-gradient-to-r from-gold/30 via-gold/10 to-transparent -z-10"></div>
+<!-- Concept 01 -->
+<div class="flex flex-col gap-4 group">
+<span class="text-6xl sm:text-7xl font-serif font-bold text-gold/30 group-hover:text-gold transition-colors leading-none">
+            01
+          </span>
+<div class="h-[1px] w-12 bg-gold/50 group-hover:w-20 transition-all duration-300"></div>
+<h3 class="text-2xl font-bold text-white tracking-tight">INVEST</h3>
+<p class="text-base text-text-muted leading-relaxed">
+            Build and grow your portfolio with direct equity, index baskets, and sovereign yield opportunities.
+          </p>
+</div>
+<!-- Concept 02 -->
+<div class="flex flex-col gap-4 group">
+<span class="text-6xl sm:text-7xl font-serif font-bold text-gold/30 group-hover:text-gold transition-colors leading-none">
+            02
+          </span>
+<div class="h-[1px] w-12 bg-gold/50 group-hover:w-20 transition-all duration-300"></div>
+<h3 class="text-2xl font-bold text-white tracking-tight">DISCOVER</h3>
+<p class="text-base text-text-muted leading-relaxed">
+            Explore curated opportunities and high-conviction research without speculative market noise.
+          </p>
+</div>
+<!-- Concept 03 -->
+<div class="flex flex-col gap-4 group">
+<span class="text-6xl sm:text-7xl font-serif font-bold text-gold/30 group-hover:text-gold transition-colors leading-none">
+            03
+          </span>
+<div class="h-[1px] w-12 bg-gold/50 group-hover:w-20 transition-all duration-300"></div>
+<h3 class="text-2xl font-bold text-white tracking-tight">ACT</h3>
+<p class="text-base text-text-muted leading-relaxed">
+            Move from decision to action simply — through instant UPI mandates and swift depository execution.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. INVESTMENT ECOSYSTEM (REDUCED TO 4 SPACIOUS EDITORIAL PANELS) -->
+<section class="py-28 lg:py-36 bg-midnight-deep/40 relative border-t border-white/5" id="services">
+<div class="max-w-7xl mx-auto px-6 lg:px-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-gold flex items-center gap-2 mb-2">
+<span class="w-6 h-[1px] bg-gold"></span>
+            PORTFOLIO PILLARS
+          </span>
+<h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            Curated Investment Verticals
+          </h2>
+</div>
+<p class="text-sm sm:text-base text-text-muted max-w-md">
+          Streamlined architecture eliminating clutter. Focused purely on wealth creation and capital preservation.
+        </p>
+</div>
+<!-- 4 Spacious Panels -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Panel 1: EQUITY -->
+<div class="luxury-panel p-10 sm:p-12 rounded-3xl flex flex-col justify-between group transition-all relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-motisons/10 rounded-full blur-[80px] pointer-events-none"></div>
+<div class="flex flex-col gap-6 relative z-10">
+<div class="w-14 h-14 rounded-2xl bg-midnight-abyss border border-gold/30 flex items-center justify-center text-gold">
+<span class="material-symbols-outlined text-3xl">trending_up</span>
+</div>
+<div>
+<span class="text-[11px] font-bold text-gold uppercase tracking-widest">Asset Class 01</span>
+<h3 class="text-3xl font-bold text-white mt-1 group-hover:text-gold-champagne transition-colors">Equity</h3>
+</div>
+<p class="text-base text-text-muted leading-relaxed">
+              Institutional-grade order routing across NSE &amp; BSE with long-term compounder thematic research.
+            </p>
+</div>
+<div class="pt-8 mt-6 border-t border-white/10 flex items-center justify-between">
+<span class="text-xs text-text-muted">Direct Market Access</span>
+<span class="text-xs font-bold text-gold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              Explore Equity <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</div>
+</div>
+<!-- Panel 2: MUTUAL FUNDS -->
+<div class="luxury-panel p-10 sm:p-12 rounded-3xl flex flex-col justify-between group transition-all relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-electric-blue/10 rounded-full blur-[80px] pointer-events-none"></div>
+<div class="flex flex-col gap-6 relative z-10">
+<div class="w-14 h-14 rounded-2xl bg-midnight-abyss border border-electric-blue/30 flex items-center justify-center text-electric-blue">
+<span class="material-symbols-outlined text-3xl">pie_chart</span>
+</div>
+<div>
+<span class="text-[11px] font-bold text-electric-blue uppercase tracking-widest">Asset Class 02</span>
+<h3 class="text-3xl font-bold text-white mt-1 group-hover:text-electric-blue transition-colors">Mutual Funds</h3>
+</div>
+<p class="text-base text-text-muted leading-relaxed">
+              Curated direct schemes, automated SIP baskets, and zero commissions for systematic capital accumulation.
+            </p>
+</div>
+<div class="pt-8 mt-6 border-t border-white/10 flex items-center justify-between">
+<span class="text-xs text-text-muted">Zero Commission Direct</span>
+<span class="text-xs font-bold text-gold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              Explore Funds <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</div>
+</div>
+<!-- Panel 3: IPO -->
+<div class="luxury-panel p-10 sm:p-12 rounded-3xl flex flex-col justify-between group transition-all relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-gold/10 rounded-full blur-[80px] pointer-events-none"></div>
+<div class="flex flex-col gap-6 relative z-10">
+<div class="w-14 h-14 rounded-2xl bg-midnight-abyss border border-gold/30 flex items-center justify-center text-gold">
+<span class="material-symbols-outlined text-3xl">rocket_launch</span>
+</div>
+<div>
+<span class="text-[11px] font-bold text-gold uppercase tracking-widest">Asset Class 03</span>
+<h3 class="text-3xl font-bold text-white mt-1 group-hover:text-gold-champagne transition-colors">IPO Desk</h3>
+</div>
+<p class="text-base text-text-muted leading-relaxed">
+              Priority bidding for mainline &amp; high-growth SME public offerings with instant UPI block validation.
+            </p>
+</div>
+<div class="pt-8 mt-6 border-t border-white/10 flex items-center justify-between">
+<span class="text-xs text-text-muted">60-Second Application</span>
+<span class="text-xs font-bold text-gold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              Explore IPOs <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</div>
+</div>
+<!-- Panel 4: BONDS & ETFs -->
+<div class="luxury-panel p-10 sm:p-12 rounded-3xl flex flex-col justify-between group transition-all relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-motisons/10 rounded-full blur-[80px] pointer-events-none"></div>
+<div class="flex flex-col gap-6 relative z-10">
+<div class="w-14 h-14 rounded-2xl bg-midnight-abyss border border-gold/30 flex items-center justify-center text-gold-champagne">
+<span class="material-symbols-outlined text-3xl">shield_with_heart</span>
+</div>
+<div>
+<span class="text-[11px] font-bold text-gold-champagne uppercase tracking-widest">Asset Class 04</span>
+<h3 class="text-3xl font-bold text-white mt-1 group-hover:text-gold-champagne transition-colors">Bonds &amp; ETFs</h3>
+</div>
+<p class="text-base text-text-muted leading-relaxed">
+              Capital preservation with Sovereign Gold Bonds (2.5% tax-free yield), corporate debt, and passive indexes.
+            </p>
+</div>
+<div class="pt-8 mt-6 border-t border-white/10 flex items-center justify-between">
+<span class="text-xs text-text-muted">RBI &amp; Sovereign Backed</span>
+<span class="text-xs font-bold text-gold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              Explore Fixed Income <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Single Sleek Link Below -->
+<div class="text-center mt-12">
+<a class="inline-flex items-center gap-2 text-sm font-bold text-gold hover:text-white uppercase tracking-widest transition-colors group" href="#open-account">
+<span>Explore all investments</span>
+<span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 5. CINEMATIC DIGITAL EXPERIENCE (FULL-WIDTH LUXURY MOCKUP) -->
+<section class="py-28 lg:py-40 relative overflow-hidden" id="platform">
+<!-- Ambient Radial Glow Behind Device -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gold/10 rounded-full blur-[180px] pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
+<div class="text-center max-w-3xl mx-auto mb-20">
+<span class="text-xs font-bold uppercase tracking-widest text-gold">UNIFIED INTERFACE</span>
+<h2 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight mt-3">
+          Your Investments.<br/>One Seamless Experience.
+        </h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<!-- 3 Short Punchy Statements (Left) -->
+<div class="lg:col-span-5 flex flex-col gap-10">
+<div class="flex gap-5 items-start group">
+<div class="w-10 h-10 rounded-xl bg-gold/15 border border-gold/40 flex items-center justify-center text-gold flex-shrink-0 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-xl">bolt</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-white group-hover:text-gold transition-colors">Discover faster.</h3>
+<p class="text-sm text-text-muted mt-1 leading-relaxed">
+                Filter markets with zero clutter and access curated sector baskets in seconds.
+              </p>
+</div>
+</div>
+<div class="flex gap-5 items-start group">
+<div class="w-10 h-10 rounded-xl bg-electric-blue/15 border border-electric-blue/40 flex items-center justify-center text-electric-blue flex-shrink-0 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-white group-hover:text-electric-blue transition-colors">Understand clearly.</h3>
+<p class="text-sm text-text-muted mt-1 leading-relaxed">
+                Transparent portfolio valuations, tax reports, and performance charts without noise.
+              </p>
+</div>
+</div>
+<div class="flex gap-5 items-start group">
+<div class="w-10 h-10 rounded-xl bg-gold/15 border border-gold/40 flex items-center justify-center text-gold flex-shrink-0 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-xl">touch_app</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-white group-hover:text-gold transition-colors">Act confidently.</h3>
+<p class="text-sm text-text-muted mt-1 leading-relaxed">
+                Frictionless execution, direct UPI linking, and guaranteed CDSL custodian custody.
+              </p>
+</div>
+</div>
+</div>
+<!-- Realistic Large Smartphone Mockup (Right) bathed in soft radial glow -->
+<div class="lg:col-span-7 flex justify-center">
+<div class="relative w-80 sm:w-96 rounded-[48px] bg-gradient-to-b from-white/25 via-gold/20 to-white/10 p-[2px] shadow-2xl gold-border-glow">
+<div class="w-full bg-midnight-abyss rounded-[46px] p-6 overflow-hidden flex flex-col gap-5 border border-midnight-card">
+<!-- Phone Status Bar -->
+<div class="flex justify-between items-center text-xs text-text-muted px-2">
+<span>09:41</span>
+<div class="flex items-center gap-1.5 text-[10px]">
+<span class="material-symbols-outlined text-xs">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-xs">wifi</span>
+<span class="material-symbols-outlined text-xs">battery_full</span>
+</div>
+</div>
+<!-- Top Bar -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-gold flex items-center justify-center text-midnight-abyss font-bold text-xs font-serif">M</div>
+<div>
+<p class="text-xs font-bold text-white leading-tight">Motisons Prime</p>
+<p class="text-[9px] text-text-muted">Account: 88401-Active</p>
+</div>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+</div>
+<!-- Main Dashboard Card -->
+<div class="luxury-panel p-5 rounded-2xl border-white/10 flex flex-col gap-1">
+<span class="text-[10px] uppercase tracking-widest text-text-muted font-medium">Total Portfolio Value</span>
+<div class="text-2xl font-extrabold text-white mt-1">₹34,80,450<span class="text-gold text-base">.00</span></div>
+<div class="flex items-center gap-1 text-[11px] text-emerald-400 mt-2 pt-2 border-t border-white/5">
+<span class="material-symbols-outlined text-xs">arrow_upward</span>
+<span>+₹42,120.00 (+1.22% Today)</span>
+</div>
+</div>
+<!-- Quick Action Pills -->
+<div class="grid grid-cols-3 gap-2">
+<div class="p-3 rounded-xl bg-white/5 text-center flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-gold text-lg">add_card</span>
+<span class="text-[10px] text-white font-medium">Add Funds</span>
+</div>
+<div class="p-3 rounded-xl bg-white/5 text-center flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-electric-blue text-lg">all_inclusive</span>
+<span class="text-[10px] text-white font-medium">Start SIP</span>
+</div>
+<div class="p-3 rounded-xl bg-white/5 text-center flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-gold text-lg">receipt_long</span>
+<span class="text-[10px] text-white font-medium">Tax P&amp;L</span>
+</div>
+</div>
+<!-- Active Watchlist Snippet -->
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex justify-between text-[11px] font-semibold text-text-muted">
+<span>CORE HOLDINGS</span>
+<span class="text-gold">Live Ticker</span>
+</div>
+<div class="p-2.5 rounded-xl bg-white/5 flex justify-between items-center">
+<div>
+<p class="text-xs font-bold text-white">Sovereign Gold Bonds</p>
+<p class="text-[10px] text-text-muted">RBI / 2.5% Tax-free</p>
+</div>
+<div class="text-right">
+<p class="text-xs font-bold text-white">₹6,840</p>
+<p class="text-[10px] text-emerald-400 font-semibold">+18.4%</p>
+</div>
+</div>
+<div class="p-2.5 rounded-xl bg-white/5 flex justify-between items-center">
+<div>
+<p class="text-xs font-bold text-white">NIFTY 50 BeES ETF</p>
+<p class="text-[10px] text-text-muted">Passive Index</p>
+</div>
+<div class="text-right">
+<p class="text-xs font-bold text-white">₹271.40</p>
+<p class="text-[10px] text-emerald-400 font-semibold">+12.1%</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. SUPERFAST ACCOUNT OPENING (ELEGANT GLOWING TIMELINE) -->
+<section class="py-28 lg:py-36 bg-midnight-deep/60 relative border-t border-white/5" id="open-account">
+<div class="max-w-6xl mx-auto px-6 lg:px-10">
+<div class="text-center max-w-2xl mx-auto mb-20">
+<span class="text-xs font-bold uppercase tracking-widest text-gold">ONBOARDING SIMPLICITY</span>
+<h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mt-2">
+          From Interest to Investor.
+        </h2>
+<p class="text-sm sm:text-base text-text-muted mt-3">
+          Designed around fewer interruptions and a simpler digital journey.
+        </p>
+</div>
+<!-- 4-Step Minimal Journey Connected by Gold Timeline -->
+<div class="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+<!-- Glowing Timeline Connector Bar (Desktop) -->
+<div class="hidden lg:block absolute top-7 left-12 right-12 h-[2px] bg-gradient-to-r from-gold via-gold-champagne to-emerald-400 opacity-30 -z-10"></div>
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center gap-3">
+<div class="w-14 h-14 rounded-2xl bg-midnight-abyss border border-gold/50 flex items-center justify-center font-bold text-gold text-lg shadow-lg shadow-gold/10">
+            01
+          </div>
+<h3 class="text-base font-bold text-white mt-1">Verify Identity</h3>
+<p class="text-xs text-text-muted leading-relaxed max-w-[200px]">
+            Instant Aadhaar OTP &amp; PAN authentication via DigiLocker.
+          </p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center gap-3">
+<div class="w-14 h-14 rounded-2xl bg-midnight-abyss border border-white/20 flex items-center justify-center font-bold text-white text-lg">
+            02
+          </div>
+<h3 class="text-base font-bold text-white mt-1">Complete Profile</h3>
+<p class="text-xs text-text-muted leading-relaxed max-w-[200px]">
+            Smart pre-fill of essential details and penny-drop bank check.
+          </p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center gap-3">
+<div class="w-14 h-14 rounded-2xl bg-midnight-abyss border border-electric-blue/40 flex items-center justify-center font-bold text-electric-blue text-lg">
+            03
+          </div>
+<h3 class="text-base font-bold text-white mt-1">Digital e-Sign</h3>
+<p class="text-xs text-text-muted leading-relaxed max-w-[200px]">
+            100% paperless authorization via NSDL in under 60 seconds.
+          </p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center text-center gap-3">
+<div class="w-14 h-14 rounded-2xl bg-gold/20 border border-gold flex items-center justify-center font-bold text-gold text-lg shadow-lg shadow-gold/20">
+            04
+          </div>
+<h3 class="text-base font-bold text-white mt-1">Start Investing</h3>
+<p class="text-xs text-text-muted leading-relaxed max-w-[200px]">
+            Access your credentials and trade across all Indian markets.
+          </p>
+</div>
+</div>
+<!-- Single Prominent CTA -->
+<div class="flex flex-col items-center justify-center gap-4 text-center">
+<a class="relative group px-12 py-4 rounded-xl bg-motisons hover:bg-electric-blue text-white font-bold text-sm tracking-widest uppercase shadow-2xl blue-glow-orb transition-all border border-white/20 hover:border-gold inline-flex items-center gap-3" href="#">
+<span>Open Account</span>
+<span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-gold/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+</a>
+<p class="text-xs text-text-muted">Zero Account Opening Fee • Zero AMC for Year 1</p>
+</div>
+</div>
+</section>
+<!-- 8. 20 YEARS OF EXPERIENCE & MILESTONES (FLOWING CURVE) -->
+<section class="py-28 lg:py-36 relative overflow-hidden" id="heritage">
+<div class="max-w-7xl mx-auto px-6 lg:px-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Dramatic Headline -->
+<div class="lg:col-span-5 flex flex-col gap-4">
+<span class="text-xs font-bold uppercase tracking-widest text-gold flex items-center gap-2">
+<span class="w-6 h-[1px] bg-gold"></span>
+            HERITAGE OF DISCIPLINE
+          </span>
+<h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            20 Years of Experience.<br/>
+<span class="gold-gradient-text">A New Way Forward.</span>
+</h2>
+<p class="text-base text-text-muted leading-relaxed">
+            Navigating market cycles, regulatory transitions, and structural expansions since 2005. Trust earned through steady execution.
+          </p>
+</div>
+<!-- Abstract Flowing Curve & 3 Quiet Milestones -->
+<div class="lg:col-span-7 relative">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+<div class="p-6 rounded-2xl luxury-panel flex flex-col justify-between">
+<span class="text-3xl font-serif text-gold font-bold">2005</span>
+<div class="mt-8">
+<h3 class="text-base font-bold text-white">Experience</h3>
+<p class="text-xs text-text-muted mt-1 leading-relaxed">
+                  Established with foundational broker ethics and risk controls across Rajasthan and North India.
+                </p>
+</div>
+</div>
+<div class="p-6 rounded-2xl luxury-panel flex flex-col justify-between">
+<span class="text-3xl font-serif text-electric-blue font-bold">2016</span>
+<div class="mt-8">
+<h3 class="text-base font-bold text-white">Technology</h3>
+<p class="text-xs text-text-muted mt-1 leading-relaxed">
+                  Transition to low-latency digital gateways and automated multi-asset clearing.
+                </p>
+</div>
+</div>
+<div class="p-6 rounded-2xl luxury-panel flex flex-col justify-between">
+<span class="text-3xl font-serif text-gold-champagne font-bold">2026</span>
+<div class="mt-8">
+<h3 class="text-base font-bold text-white">Trust at Scale</h3>
+<p class="text-xs text-text-muted mt-1 leading-relaxed">
+                  Consolidated wealth platform managing ₹2,500+ Cr client assets across retail and institutions.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. EDITORIAL INSIGHTS (EXACTLY 3 TILES + 1 LINK) -->
+<section class="py-28 lg:py-36 bg-midnight-deep/30 border-t border-white/5" id="insights">
+<div class="max-w-7xl mx-auto px-6 lg:px-10">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-gold flex items-center gap-2 mb-2">
+<span class="w-6 h-[1px] bg-gold"></span>
+            PERSPECTIVES
+          </span>
+<h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            Curated Intelligence
+          </h2>
+</div>
+<a class="text-xs font-bold text-gold hover:text-white uppercase tracking-widest flex items-center gap-1 transition-colors" href="#">
+<span>Explore Insights</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Exactly 3 Premium Editorial Tiles -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Tile 1 -->
+<article class="luxury-panel rounded-2xl p-8 flex flex-col justify-between group transition-all">
+<div class="flex flex-col gap-4">
+<span class="text-[11px] font-bold uppercase tracking-widest text-gold">Market Insights</span>
+<h3 class="text-xl font-bold text-white group-hover:text-gold-champagne transition-colors leading-snug">
+              RBI Liquidity Stance &amp; Impact on Equity Multiples
+            </h3>
+<p class="text-xs text-text-muted leading-relaxed">
+              Systemic banking liquidity and how sectoral valuations historically respond to policy shifts.
+            </p>
+</div>
+<span class="pt-6 text-xs font-semibold text-text-muted flex items-center gap-1 group-hover:text-white transition-colors">
+            Read Perspective <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</article>
+<!-- Tile 2 -->
+<article class="luxury-panel rounded-2xl p-8 flex flex-col justify-between group transition-all">
+<div class="flex flex-col gap-4">
+<span class="text-[11px] font-bold uppercase tracking-widest text-electric-blue">Investor Education</span>
+<h3 class="text-xl font-bold text-white group-hover:text-electric-blue transition-colors leading-snug">
+              Sovereign Gold Bonds: The Compounding Alpha
+            </h3>
+<p class="text-xs text-text-muted leading-relaxed">
+              How indexation changes and 2.5% semi-annual interest create long-term structural tax advantages.
+            </p>
+</div>
+<span class="pt-6 text-xs font-semibold text-text-muted flex items-center gap-1 group-hover:text-white transition-colors">
+            Read Perspective <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</article>
+<!-- Tile 3 -->
+<article class="luxury-panel rounded-2xl p-8 flex flex-col justify-between group transition-all">
+<div class="flex flex-col gap-4">
+<span class="text-[11px] font-bold uppercase tracking-widest text-gold-champagne">Latest News</span>
+<h3 class="text-xl font-bold text-white group-hover:text-gold-champagne transition-colors leading-snug">
+              Understanding CDSL Custody &amp; Depository Rights
+            </h3>
+<p class="text-xs text-text-muted leading-relaxed">
+              A concise roadmap to direct legal shareholding without intermediary lien risk.
+            </p>
+</div>
+<span class="pt-6 text-xs font-semibold text-text-muted flex items-center gap-1 group-hover:text-white transition-colors">
+            Read Perspective <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</article>
+</div>
+</div>
+</section>
+<!-- 10. GRAND CINEMATIC FINAL CTA -->
+<section class="py-32 lg:py-44 bg-midnight-abyss relative overflow-hidden">
+<!-- Grand Radial Gold Glow Behind Block -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-[700px] h-[700px] bg-gradient-to-tr from-gold/15 via-motisons/15 to-transparent rounded-full blur-[200px]"></div>
+</div>
+<div class="max-w-6xl mx-auto px-6 relative z-10">
+<div class="luxury-panel border-gold/40 rounded-3xl p-12 sm:p-20 text-center flex flex-col items-center gold-border-glow">
+<span class="text-xs font-bold uppercase tracking-widest text-gold mb-3">TAKE THE NEXT STEP</span>
+<h2 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight max-w-3xl leading-tight">
+          Your Financial Journey<br/>
+<span class="gold-gradient-text">Starts Here.</span>
+</h2>
+<p class="text-base sm:text-lg text-text-muted max-w-xl mt-4 leading-relaxed">
+          Experience investing with clarity, confidence and technology. Open your account in under 5 minutes.
+        </p>
+<!-- Dual Luxury CTAs -->
+<div class="flex flex-wrap items-center justify-center gap-4 mt-10">
+<a class="relative group px-10 py-4 rounded-xl bg-motisons hover:bg-electric-blue text-white font-bold text-sm tracking-wider uppercase shadow-2xl transition-all border border-white/20 hover:border-gold inline-flex items-center gap-2" href="#open-account">
+<span>OPEN ACCOUNT</span>
+<span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-gold/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+</a>
+<a class="px-8 py-4 rounded-xl luxury-panel text-white hover:text-gold font-semibold text-sm transition-all flex items-center gap-2" href="tel:1800MOTISONS">
+<span class="material-symbols-outlined text-base text-gold">phone_in_talk</span>
+<span>EXPLORE MOTISONS</span>
+</a>
+</div>
+<p class="text-xs text-text-muted mt-8">
+          Advisory assistance available via <strong class="text-white">1800-MOTISONS</strong> or regional headquarters.
+        </p>
+</div>
+</div>
+</section>
+</main>
+<!-- ULTRA-REFINED CORPORATE LUXURY FOOTER -->
+<footer class="bg-midnight-abyss border-t border-white/10 text-text-muted pt-16 pb-12">
+<div class="max-w-7xl mx-auto px-6 lg:px-10">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-12 border-b border-white/10">
+<!-- Monogram & Corporate Identity -->
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-gold/20 border border-gold/40 flex items-center justify-center text-gold font-serif font-bold text-base">
+          M
+        </div>
+<div>
+<p class="text-sm font-bold text-white">Motisons Shares &amp; Stocks Pvt. Ltd.</p>
+<p class="text-[10px] text-text-muted">SEBI Reg. INZ000288836 • Member NSE, BSE, MCX • CDSL Participant</p>
+</div>
+</div>
+<!-- Minimal Luxury Links -->
+<div class="flex flex-wrap items-center gap-6 text-xs">
+<a class="hover:text-gold transition-colors" href="#services">Products</a>
+<a class="hover:text-gold transition-colors" href="#platform">Experience</a>
+<a class="hover:text-gold transition-colors" href="#heritage">Heritage</a>
+<a class="hover:text-gold transition-colors" href="#insights">Insights</a>
+<a class="hover:text-gold transition-colors" href="#">Regulatory</a>
+<a class="hover:text-gold transition-colors" href="#">Support</a>
+</div>
+</div>
+<!-- SEBI & Compliance Strip -->
+<div class="py-8 text-[11px] leading-relaxed text-text-muted border-b border-white/5 space-y-2">
+<p>
+<strong class="text-white">Statutory Disclosure:</strong> Investments in securities market are subject to market risks; read all scheme related documents carefully before investing. Registered Office: Motisons Tower, SB-110, Lalkothi, Tonk Road, Jaipur, Rajasthan 302015. Depository Participant ID: 12048900.
+      </p>
+</div>
+<!-- Copyright -->
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+<p>© 2026 Motisons Shares &amp; Stocks Pvt. Ltd. All rights reserved.</p>
+<div class="flex items-center gap-4 text-text-muted">
+<a class="hover:text-white transition-colors" href="#">Privacy</a>
+<a class="hover:text-white transition-colors" href="#">Terms</a>
+<a class="hover:text-white transition-colors" href="#">Disclaimers</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Global Prototype Switcher -->
+<script src="switcher.js"></script>
+</body></html>

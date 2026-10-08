@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<title>Motisons Shares - Digital Onboarding Experience</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #F5D38A 0%, #D6A84F 50%, #E8C170 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-border-glow {
+      box-shadow: 0 0 25px rgba(214, 168, 79, 0.15), inset 0 0 1px rgba(245, 211, 138, 0.3);
+    }
+    .phone-perspective {
+      perspective: 1200px;
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest": "#050B16",
+            "surface-dim": "#081426",
+            "surface": "#0C192E",
+            "surface-container": "#11223B",
+            "surface-container-high": "#182C4B",
+            "surface-container-highest": "#20375C",
+            "on-surface": "#F2F5FB",
+            "on-surface-variant": "#9AA8C2",
+            "outline": "#3F5170",
+            "outline-variant": "#223552",
+            "primary": "#3B82F6",
+            "primary-container": "#155EEF",
+            "on-primary": "#FFFFFF",
+            "on-primary-container": "#FFFFFF",
+            "gold": {
+              "light": "#F5D38A",
+              "DEFAULT": "#D6A84F",
+              "dark": "#9E7628"
+            }
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#050B16] text-[#F2F5FB] font-sans antialiased min-h-screen selection:bg-[#155EEF] selection:text-white flex flex-col justify-between">
+<!-- TOP LUXURY HEADER -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#050B16]/90 backdrop-blur-xl border-b border-[#223552]/60">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+<!-- Brand & Insignia -->
+<a href="index.html" class="flex items-center gap-4 hover:opacity-90 transition-opacity" title="Back to Motisons Prototype Hub">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#182C4B] to-[#0C192E] border border-[#D6A84F]/40 flex items-center justify-center shadow-[0_0_15px_rgba(214,168,79,0.2)]">
+<span class="material-symbols-outlined text-[#F5D38A] text-[22px]">diamond</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-bold tracking-tight text-white text-base">MOTISONS</span>
+<span class="font-semibold text-[#D6A84F] text-xs tracking-widest uppercase">SHARES</span>
+</div>
+<span class="text-[11px] text-[#9AA8C2] tracking-wider uppercase">Digital Wealth Experience</span>
+</div>
+</a>
+<!-- Center Subline Tag -->
+<div class="hidden lg:flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#081426] border border-[#223552]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#D6A84F]"></span>
+<span class="text-xs font-medium text-[#F5D38A] tracking-wide uppercase">Motisons Digital Onboarding</span>
+<span class="text-xs text-[#9AA8C2]">• Less Clicks. Less Friction. More Investing.</span>
+</div>
+<!-- Minimal Navigation (Exit / Help / Status) -->
+<div class="flex items-center gap-4 sm:gap-6">
+<a class="hidden sm:inline-flex text-xs uppercase font-medium tracking-wider text-[#9AA8C2] hover:text-[#F5D38A] transition-colors" href="#journey">Experience</a>
+<a class="hidden sm:inline-flex text-xs uppercase font-medium tracking-wider text-[#9AA8C2] hover:text-[#F5D38A] transition-colors" href="#screens">Interface</a>
+<a class="inline-flex items-center gap-1.5 text-xs uppercase font-medium tracking-wider text-[#9AA8C2] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px]">help_outline</span>
+<span>Help</span>
+</a>
+<a class="px-3.5 py-1.5 rounded-lg bg-[#0C192E] border border-[#223552] hover:border-[#D6A84F]/40 text-xs font-medium tracking-wider uppercase text-[#9AA8C2] hover:text-white transition-all flex items-center gap-1.5" href="index.html" title="Return to Prototype Hub">
+<span>Exit</span>
+<span class="material-symbols-outlined text-[15px]">logout</span>
+</a>
+</div>
+</div>
+</header>
+<main class="w-full pt-20 flex-1">
+<!-- HERO SECTION (HIGH VISUAL IMPACT) -->
+<section class="relative w-full overflow-hidden pt-12 md:pt-16 pb-20 lg:pb-28">
+<!-- Background Ambient Glows -->
+<div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] bg-[#155EEF]/10 rounded-full blur-[140px] pointer-events-none"></div>
+<div class="absolute top-1/3 right-10 w-[480px] h-[480px] bg-[#D6A84F]/10 rounded-full blur-[150px] pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<!-- Left Side: Editorial Typography & Value -->
+<div class="lg:col-span-7 flex flex-col items-start gap-6">
+<!-- Small Gold Eyebrow -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#081426] border border-[#D6A84F]/30 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-[#D6A84F] shadow-[0_0_8px_#D6A84F]"></span>
+<span class="text-xs font-semibold uppercase tracking-widest text-[#F5D38A]">MOTISONS DIGITAL ONBOARDING</span>
+</div>
+<!-- Hero Heading -->
+<div class="space-y-1">
+<h1 class="text-4xl sm:text-5xl lg:text-[72px] font-bold text-white tracking-tight leading-[1.08]">
+              Open Your Motisons Account.
+            </h1>
+<p class="text-4xl sm:text-5xl lg:text-[72px] font-bold gold-gradient-text tracking-tight leading-[1.08]">
+              Without the Usual Friction.
+            </p>
+</div>
+<!-- Supporting Narrative -->
+<p class="text-lg lg:text-[20px] text-[#9AA8C2] font-normal leading-relaxed max-w-xl">
+            A simpler digital journey designed around fewer interruptions and less repetitive information.
+          </p>
+<!-- Primary CTA & Reassurance -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-2 w-full sm:w-auto">
+<a class="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#155EEF] hover:bg-[#1250cf] border border-[#D6A84F]/50 text-white font-semibold text-base tracking-wide shadow-[0_0_24px_rgba(21,94,239,0.4)] hover:shadow-[0_0_30px_rgba(214,168,79,0.3)] transition-all flex items-center justify-center gap-3 group" href="#screens">
+<span>START NOW</span>
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1 text-[#F5D38A]">arrow_forward</span>
+</a>
+<div class="flex items-center gap-2 text-xs text-[#9AA8C2] px-3 py-3 rounded-lg bg-[#081426]/70 border border-[#223552]/60">
+<span class="material-symbols-outlined text-[#F5D38A] text-[18px]">verified_user</span>
+<span>Secure digital onboarding • Designed for simplicity</span>
+</div>
+</div>
+<!-- Subtle Trust Pillars -->
+<div class="grid grid-cols-3 gap-3 pt-4 w-full max-w-lg border-t border-[#223552]/70">
+<div class="flex flex-col">
+<span class="text-[#F5D38A] font-semibold text-sm">Smart Pre-fill</span>
+<span class="text-[#9AA8C2] text-xs">Zero manual retyping</span>
+</div>
+<div class="flex flex-col border-l border-[#223552] pl-3">
+<span class="text-[#F5D38A] font-semibold text-sm">Fewer Interruptions</span>
+<span class="text-[#9AA8C2] text-xs">One clean step at a time</span>
+</div>
+<div class="flex flex-col border-l border-[#223552] pl-3">
+<span class="text-[#F5D38A] font-semibold text-sm">Secure Verification</span>
+<span class="text-[#9AA8C2] text-xs">Direct statutory checks</span>
+</div>
+</div>
+</div>
+<!-- Right Side: 40% Large Realistic Smartphone Mockup & Floating Ambient Badges -->
+<div class="lg:col-span-5 relative flex justify-center items-center">
+<!-- Ambient Backlight -->
+<div class="absolute w-72 h-72 rounded-full bg-[#155EEF]/20 blur-[80px]"></div>
+<div class="absolute w-60 h-60 rounded-full bg-[#D6A84F]/15 blur-[70px] translate-x-8 translate-y-8"></div>
+<!-- Smartphone Shell -->
+<div class="relative w-full max-w-[340px] bg-[#0A121F] rounded-[44px] p-3.5 shadow-[0_25px_60px_rgba(0,0,0,0.85)] border-2 border-[#20375C] ring-1 ring-[#D6A84F]/30">
+<!-- Glass Reflection Overlay -->
+<div class="absolute inset-0 rounded-[44px] bg-gradient-to-tr from-transparent via-white/[0.03] to-transparent pointer-events-none"></div>
+<!-- Phone Top Bezel & Speaker -->
+<div class="flex items-center justify-between px-5 pt-2 pb-1 text-[#9AA8C2] text-[11px] font-medium">
+<span>09:41</span>
+<div class="w-20 h-4 bg-[#050B16] rounded-full mx-auto -mt-1 flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-[#11223B]"></div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[13px]">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[13px]">wifi</span>
+<span class="material-symbols-outlined text-[13px]">battery_full</span>
+</div>
+</div>
+<!-- Inside Phone Screen Content -->
+<div class="mt-2 bg-[#050B16] rounded-[32px] p-5 flex flex-col justify-between min-h-[460px] border border-[#223552]/80">
+<!-- Top inside Header -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-lg bg-[#0C192E] border border-[#D6A84F]/40 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#F5D38A] text-[14px]">diamond</span>
+</div>
+<span class="text-xs font-bold text-white tracking-wider">MOTISONS</span>
+</div>
+<span class="text-[10px] uppercase font-semibold text-[#F5D38A] bg-[#11223B] px-2 py-0.5 rounded-full border border-[#D6A84F]/30">Step 1</span>
+</div>
+<!-- Clean 3-step progress bar -->
+<div class="space-y-1.5 pt-1">
+<div class="flex justify-between text-[10px] text-[#9AA8C2] font-medium">
+<span class="text-[#F5D38A] font-semibold">01 Verify</span>
+<span>02 Confirm</span>
+<span>03 Complete</span>
+</div>
+<div class="w-full h-1 bg-[#11223B] rounded-full overflow-hidden">
+<div class="w-1/3 h-full bg-gradient-to-r from-[#155EEF] to-[#D6A84F] rounded-full"></div>
+</div>
+</div>
+<!-- Step Title -->
+<div class="pt-2">
+<h3 class="text-lg font-bold text-white tracking-tight">Let's get started.</h3>
+<p class="text-xs text-[#9AA8C2] mt-0.5">Enter your primary mobile number</p>
+</div>
+<!-- Input Component -->
+<div class="space-y-1.5 pt-1">
+<label class="text-[10px] uppercase font-semibold tracking-wider text-[#9AA8C2]">Mobile Number</label>
+<div class="flex items-center bg-[#0C192E] rounded-xl p-2 border border-[#223552] focus-within:border-[#155EEF] transition-colors">
+<div class="flex items-center gap-1.5 px-2 py-1 rounded bg-[#11223B] text-xs font-semibold text-[#F5D38A]">
+<span>🇮🇳</span>
+<span>+91</span>
+</div>
+<input class="w-full bg-transparent px-3 py-1 text-sm text-white focus:outline-none font-medium" placeholder="98765 43210" readonly="" type="text" value="98765 43210"/>
+</div>
+</div>
+<!-- Verified Check Note -->
+<div class="p-2.5 rounded-xl bg-[#081426] border border-[#223552]/80 flex items-center gap-2">
+<span class="material-symbols-outlined text-[#F5D38A] text-[16px]">verified</span>
+<span class="text-[11px] text-[#9AA8C2]">Direct carrier OTP auto-confirmation</span>
+</div>
+</div>
+<!-- Primary Inside Button -->
+<div class="space-y-2 pt-4">
+<button class="w-full py-3 rounded-xl bg-[#155EEF] hover:bg-[#1250cf] text-white text-xs font-bold tracking-wider uppercase shadow-[0_0_15px_rgba(21,94,239,0.5)] flex items-center justify-center gap-1.5">
+<span>CONTINUE</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</button>
+<p class="text-[10px] text-center text-[#9AA8C2]">Digital-first onboarding • Protected</p>
+</div>
+</div>
+<!-- Bottom Home Indicator -->
+<div class="w-24 h-1 bg-white/20 rounded-full mx-auto mt-2"></div>
+</div>
+<!-- Floating Glassmorphic Badges -->
+<!-- Top Floating Badge -->
+<div class="absolute -top-3 -right-2 sm:-right-4 bg-[#081426]/90 backdrop-blur-md px-3.5 py-2 rounded-xl border border-[#D6A84F]/40 shadow-[0_10px_25px_rgba(0,0,0,0.5)] flex items-center gap-2 z-10">
+<div class="w-5 h-5 rounded-full bg-[#D6A84F]/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#F5D38A] text-[14px]">check</span>
+</div>
+<span class="text-xs font-semibold text-white">Identity Verified</span>
+</div>
+<!-- Mid Floating Badge -->
+<div class="absolute top-1/2 -left-4 sm:-left-8 -translate-y-1/2 bg-[#081426]/90 backdrop-blur-md px-3.5 py-2.5 rounded-xl border border-[#223552] shadow-[0_10px_25px_rgba(0,0,0,0.5)] flex items-center gap-2.5 z-10">
+<span class="material-symbols-outlined text-[#155EEF] text-[18px]">bolt</span>
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-white">Details Prefilled</span>
+<span class="text-[10px] text-[#9AA8C2]">Auto-populated registry</span>
+</div>
+</div>
+<!-- Bottom Floating Badge -->
+<div class="absolute -bottom-3 -right-2 sm:-right-4 bg-[#081426]/90 backdrop-blur-md px-4 py-2.5 rounded-xl border border-[#D6A84F]/50 shadow-[0_10px_25px_rgba(0,0,0,0.5)] flex items-center gap-2.5 z-10">
+<span class="material-symbols-outlined text-[#F5D38A] text-[18px]">trending_up</span>
+<div class="flex flex-col">
+<span class="text-xs font-bold text-[#F5D38A]">Ready to Invest</span>
+<span class="text-[10px] text-[#9AA8C2]">Instant execution access</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: VISUAL JOURNEY ("From Interest to Investor") -->
+<section class="w-full py-20 bg-[#081426]/70 border-y border-[#223552]/70 relative" id="journey">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex flex-col items-center text-center gap-3 mb-16">
+<span class="text-xs font-semibold uppercase tracking-widest text-[#F5D38A]">4 Elegant Stages</span>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+            From Interest to Investor.
+          </h2>
+<p class="text-base text-[#9AA8C2] max-w-xl">
+            A luminous, sequential pathway engineered for clarity, respect for investor time, and confidence.
+          </p>
+</div>
+<!-- 4 Stages Connected by Radiant Gold Flowing Line -->
+<div class="relative">
+<!-- Flowing Golden Line (Desktop) -->
+<div class="hidden md:block absolute top-12 left-[12%] right-[12%] h-[2px] bg-gradient-to-r from-[#D6A84F]/20 via-[#F5D38A] to-[#D6A84F]/20 shadow-[0_0_12px_rgba(245,211,138,0.5)]"></div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-6 relative z-10">
+<!-- Stage 01 -->
+<div class="flex flex-col items-center text-center gap-3 group">
+<div class="w-24 h-24 rounded-2xl bg-[#0C192E] border border-[#D6A84F]/40 flex flex-col items-center justify-center shadow-[0_0_20px_rgba(214,168,79,0.15)] group-hover:border-[#F5D38A] transition-all">
+<span class="text-2xl font-bold text-[#F5D38A] tracking-tight">01</span>
+<span class="material-symbols-outlined text-[#155EEF] text-[18px]">phonelink_lock</span>
+</div>
+<h3 class="text-base font-bold text-white uppercase tracking-wider">VERIFY</h3>
+<p class="text-xs text-[#9AA8C2] max-w-[200px] leading-relaxed">
+                Single mobile &amp; identity authentication with direct auto-check.
+              </p>
+</div>
+<!-- Stage 02 -->
+<div class="flex flex-col items-center text-center gap-3 group">
+<div class="w-24 h-24 rounded-2xl bg-[#0C192E] border border-[#D6A84F]/40 flex flex-col items-center justify-center shadow-[0_0_20px_rgba(214,168,79,0.15)] group-hover:border-[#F5D38A] transition-all">
+<span class="text-2xl font-bold text-[#F5D38A] tracking-tight">02</span>
+<span class="material-symbols-outlined text-[#155EEF] text-[18px]">fact_check</span>
+</div>
+<h3 class="text-base font-bold text-white uppercase tracking-wider">CONFIRM</h3>
+<p class="text-xs text-[#9AA8C2] max-w-[200px] leading-relaxed">
+                Smart pre-filled profile and bank verification without manual scans.
+              </p>
+</div>
+<!-- Stage 03 -->
+<div class="flex flex-col items-center text-center gap-3 group">
+<div class="w-24 h-24 rounded-2xl bg-[#0C192E] border border-[#D6A84F]/40 flex flex-col items-center justify-center shadow-[0_0_20px_rgba(214,168,79,0.15)] group-hover:border-[#F5D38A] transition-all">
+<span class="text-2xl font-bold text-[#F5D38A] tracking-tight">03</span>
+<span class="material-symbols-outlined text-[#155EEF] text-[18px]">draw</span>
+</div>
+<h3 class="text-base font-bold text-white uppercase tracking-wider">eSIGN</h3>
+<p class="text-xs text-[#9AA8C2] max-w-[200px] leading-relaxed">
+                Consolidated master agreement signed securely in one tap.
+              </p>
+</div>
+<!-- Stage 04 -->
+<div class="flex flex-col items-center text-center gap-3 group">
+<div class="w-24 h-24 rounded-2xl bg-[#0C192E] border border-[#D6A84F]/60 flex flex-col items-center justify-center shadow-[0_0_25px_rgba(245,211,138,0.25)] group-hover:border-[#F5D38A] transition-all">
+<span class="text-2xl font-bold text-[#F5D38A] tracking-tight">04</span>
+<span class="material-symbols-outlined text-[#F5D38A] text-[18px]">rocket_launch</span>
+</div>
+<h3 class="text-base font-bold text-[#F5D38A] uppercase tracking-wider">START INVESTING</h3>
+<p class="text-xs text-[#9AA8C2] max-w-[200px] leading-relaxed">
+                Direct credentials created. Full market access unlocked.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: BEFORE → AFTER STORY ("Same Goal. A Simpler Journey.") -->
+<section class="w-full py-24 bg-[#050B16] relative">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex flex-col items-center text-center gap-3 mb-16">
+<span class="text-xs font-semibold uppercase tracking-widest text-[#D6A84F]">The Shift in Perspective</span>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+            Same Goal. A Simpler Journey.
+          </h2>
+<p class="text-base text-[#9AA8C2] max-w-xl">
+            Compare the multi-hop friction of legacy brokerage journeys against Motisons' unified single-decision architecture.
+          </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- LEFT: Current Legacy Journey -->
+<div class="lg:col-span-5 p-6 sm:p-8 rounded-3xl bg-[#081426] border border-[#223552] flex flex-col gap-6 opacity-85">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold uppercase tracking-wider text-[#9AA8C2]">CURRENT INDUSTRY JOURNEY</span>
+<span class="text-[11px] uppercase font-semibold text-[#FF8585] bg-[#3B1212]/50 px-2.5 py-1 rounded-md border border-[#FF8585]/30">Legacy Overhead</span>
+</div>
+<!-- Step flow in muted gray -->
+<div class="space-y-3">
+<div class="flex items-center gap-3 p-3 rounded-xl bg-[#050B16]/70 border border-[#223552]/40 text-[#9AA8C2] text-xs">
+<span class="material-symbols-outlined text-[16px] text-[#9AA8C2]">edit_note</span>
+<span>Repetitive Form Fields (Parents, manual addresses)</span>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-xl bg-[#050B16]/70 border border-[#223552]/40 text-[#9AA8C2] text-xs">
+<span class="material-symbols-outlined text-[16px] text-[#9AA8C2]">sms</span>
+<span>Separate Mobile &amp; Email Interruptions</span>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-xl bg-[#050B16]/70 border border-[#223552]/40 text-[#9AA8C2] text-xs">
+<span class="material-symbols-outlined text-[16px] text-[#9AA8C2]">upload_file</span>
+<span>Manual Document Camera Scans &amp; Cheque Uploads</span>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-xl bg-[#050B16]/70 border border-[#223552]/40 text-[#9AA8C2] text-xs">
+<span class="material-symbols-outlined text-[16px] text-[#9AA8C2]">hourglass_top</span>
+<span>External Gateway Redirects &amp; Delay Windows</span>
+</div>
+</div>
+<p class="text-xs text-[#9AA8C2] italic">Result: High drop-off from unnecessary repetition and form fatigue.</p>
+</div>
+<!-- CENTER: Golden Transformation Badge -->
+<div class="lg:col-span-2 flex flex-col items-center justify-center gap-2">
+<div class="w-14 h-14 rounded-full bg-gradient-to-br from-[#F5D38A] to-[#D6A84F] text-[#050B16] flex items-center justify-center font-bold shadow-[0_0_25px_rgba(245,211,138,0.4)]">
+<span class="material-symbols-outlined text-[28px]">arrow_forward</span>
+</div>
+<span class="text-xs font-bold text-[#F5D38A] uppercase tracking-wider text-center">The Motisons Difference</span>
+</div>
+<!-- RIGHT: Proposed Motisons Experience -->
+<div class="lg:col-span-5 p-6 sm:p-8 rounded-3xl bg-[#0C192E] border-2 border-[#D6A84F]/40 shadow-[0_15px_40px_rgba(214,168,79,0.1)] flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold uppercase tracking-wider text-[#F5D38A]">PROPOSED MOTISONS EXPERIENCE</span>
+<span class="text-[11px] uppercase font-bold text-[#D6A84F] bg-[#11223B] px-2.5 py-1 rounded-md border border-[#D6A84F]/40">Streamlined</span>
+</div>
+<!-- Streamlined flow in Motisons Blue & radiant Gold -->
+<div class="space-y-3">
+<div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#081426] border border-[#155EEF]/40 text-white text-xs font-medium">
+<span class="material-symbols-outlined text-[18px] text-[#F5D38A]">phonelink_ring</span>
+<span><strong class="text-[#F5D38A]">Verify:</strong> Instant phone auth with auto-read</span>
+</div>
+<div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#081426] border border-[#155EEF]/40 text-white text-xs font-medium">
+<span class="material-symbols-outlined text-[18px] text-[#F5D38A]">auto_awesome</span>
+<span><strong class="text-[#F5D38A]">Smart Details:</strong> Verified registry auto-population</span>
+</div>
+<div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#081426] border border-[#155EEF]/40 text-white text-xs font-medium">
+<span class="material-symbols-outlined text-[18px] text-[#F5D38A]">draw</span>
+<span><strong class="text-[#F5D38A]">eSign:</strong> Consolidated single agreement execution</span>
+</div>
+<div class="flex items-center gap-3 p-3.5 rounded-xl bg-[#081426] border border-[#155EEF]/40 text-white text-xs font-medium">
+<span class="material-symbols-outlined text-[18px] text-[#F5D38A]">check_circle</span>
+<span><strong class="text-[#F5D38A]">Ready:</strong> Direct trading credentials ready</span>
+</div>
+</div>
+<p class="text-xs text-[#F5D38A] font-medium">Reduce unnecessary steps. Preserve every required verification.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: SHOW THE ACTUAL NEW EXPERIENCE (5 STAGGERED APP SCREENS) -->
+<section class="w-full py-24 bg-[#081426]/50 border-t border-[#223552]/70 relative overflow-hidden" id="screens">
+<!-- Ambient Radial Backlight for the Showcase -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[350px] bg-[#D6A84F]/10 rounded-full blur-[160px] pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex flex-col items-center text-center gap-3 mb-16">
+<span class="text-xs font-semibold uppercase tracking-widest text-[#F5D38A]">Designed Around One Decision at a Time</span>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+            The Complete Onboarding Flow.
+          </h2>
+<p class="text-base text-[#9AA8C2] max-w-xl">
+            Five deliberate, focused interactions. No overwhelming forms. Complete regulatory compliance with zero unnecessary clicks.
+          </p>
+</div>
+<!-- 5 Staggered / Horizontally Arranged Phone Mockups -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4 items-stretch">
+<!-- SCREEN 01: MOBILE -->
+<div class="bg-[#0A121F] rounded-[32px] p-3 border border-[#20375C] ring-1 ring-[#223552] flex flex-col justify-between shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+<div class="bg-[#050B16] rounded-[24px] p-4 flex flex-col justify-between flex-1 border border-[#223552]/50">
+<div class="space-y-4">
+<div class="flex items-center justify-between text-[10px] text-[#9AA8C2]">
+<span>09:41</span>
+<span class="text-[#F5D38A] font-semibold">SCREEN 01</span>
+</div>
+<div>
+<span class="text-[10px] text-[#D6A84F] uppercase font-bold tracking-wider">Step 1</span>
+<h4 class="text-sm font-bold text-white">Let's get started.</h4>
+<p class="text-[11px] text-[#9AA8C2] mt-0.5">Mobile verification</p>
+</div>
+<div class="p-2.5 rounded-xl bg-[#0C192E] border border-[#223552] space-y-1">
+<span class="text-[9px] uppercase tracking-wider text-[#9AA8C2]">Mobile</span>
+<div class="text-xs font-semibold text-white tracking-wide">+91 98765 43210</div>
+</div>
+<div class="grid grid-cols-4 gap-1">
+<div class="h-7 bg-[#11223B] rounded-md flex items-center justify-center text-xs font-bold text-white">5</div>
+<div class="h-7 bg-[#11223B] rounded-md flex items-center justify-center text-xs font-bold text-white">8</div>
+<div class="h-7 bg-[#11223B] rounded-md flex items-center justify-center text-xs font-bold text-white">2</div>
+<div class="h-7 bg-[#11223B] rounded-md flex items-center justify-center text-xs font-bold text-white">9</div>
+</div>
+</div>
+<button class="mt-5 w-full py-2.5 rounded-lg bg-[#155EEF] text-white text-[11px] font-bold uppercase tracking-wider flex items-center justify-center gap-1 shadow-md">
+<span>CONTINUE</span>
+<span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+</button>
+</div>
+<div class="w-16 h-1 bg-white/20 rounded-full mx-auto mt-2"></div>
+</div>
+<!-- SCREEN 02: PAN & DOB -->
+<div class="bg-[#0A121F] rounded-[32px] p-3 border border-[#20375C] ring-1 ring-[#223552] flex flex-col justify-between shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+<div class="bg-[#050B16] rounded-[24px] p-4 flex flex-col justify-between flex-1 border border-[#223552]/50">
+<div class="space-y-4">
+<div class="flex items-center justify-between text-[10px] text-[#9AA8C2]">
+<span>09:41</span>
+<span class="text-[#F5D38A] font-semibold">SCREEN 02</span>
+</div>
+<div>
+<span class="text-[10px] text-[#D6A84F] uppercase font-bold tracking-wider">Step 2</span>
+<h4 class="text-sm font-bold text-white">Verify your identity.</h4>
+<p class="text-[11px] text-[#9AA8C2] mt-0.5">PAN &amp; Date of Birth</p>
+</div>
+<div class="space-y-2">
+<div class="p-2 rounded-xl bg-[#0C192E] border border-[#223552]">
+<span class="text-[9px] uppercase tracking-wider text-[#9AA8C2]">PAN</span>
+<div class="text-xs font-bold text-white tracking-widest">ABCDE1234F</div>
+</div>
+<div class="p-2 rounded-xl bg-[#0C192E] border border-[#223552]">
+<span class="text-[9px] uppercase tracking-wider text-[#9AA8C2]">DOB</span>
+<div class="text-xs font-medium text-white">14 / 08 / 1991</div>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-1.5 rounded-lg bg-[#081426] border border-[#D6A84F]/40 text-[#F5D38A] text-[10px]">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+<span>Direct Match Verified</span>
+</div>
+</div>
+<button class="mt-5 w-full py-2.5 rounded-lg bg-[#155EEF] text-white text-[11px] font-bold uppercase tracking-wider flex items-center justify-center gap-1 shadow-md">
+<span>CONTINUE</span>
+<span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+</button>
+</div>
+<div class="w-16 h-1 bg-white/20 rounded-full mx-auto mt-2"></div>
+</div>
+<!-- SCREEN 03: SMART PREFILL -->
+<div class="bg-[#0A121F] rounded-[32px] p-3 border border-[#D6A84F]/40 ring-1 ring-[#D6A84F]/30 flex flex-col justify-between shadow-[0_10px_30px_rgba(214,168,79,0.15)] hover:-translate-y-1.5 transition-all duration-300">
+<div class="bg-[#050B16] rounded-[24px] p-4 flex flex-col justify-between flex-1 border border-[#223552]/50">
+<div class="space-y-3">
+<div class="flex items-center justify-between text-[10px] text-[#9AA8C2]">
+<span>09:41</span>
+<span class="text-[#F5D38A] font-semibold">SCREEN 03</span>
+</div>
+<div>
+<span class="text-[10px] text-[#D6A84F] uppercase font-bold tracking-wider">Step 3</span>
+<h4 class="text-sm font-bold text-white leading-tight">We've filled in your details.</h4>
+<p class="text-[11px] text-[#9AA8C2]">Smart pre-filled profile</p>
+</div>
+<div class="p-2 rounded-xl bg-[#0C192E] border border-[#223552] text-[10px] space-y-1">
+<div class="text-[#9AA8C2]">Full Name</div>
+<div class="text-white font-bold">Rahul Sharma</div>
+<div class="text-[#9AA8C2] pt-1">Address</div>
+<div class="text-white truncate">Jaipur, Rajasthan</div>
+</div>
+<div class="flex items-center gap-1 px-2 py-1 rounded bg-[#11223B] text-[10px] text-[#F5D38A]">
+<span class="material-symbols-outlined text-[13px]">verified</span>
+<span>Pre-verified Registry</span>
+</div>
+</div>
+<button class="mt-5 w-full py-2.5 rounded-lg bg-[#155EEF] text-white text-[11px] font-bold uppercase tracking-wider flex items-center justify-center gap-1 shadow-md">
+<span>LOOKS GOOD</span>
+<span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+</button>
+</div>
+<div class="w-16 h-1 bg-white/20 rounded-full mx-auto mt-2"></div>
+</div>
+<!-- SCREEN 04: CHECKLIST & ESIGN -->
+<div class="bg-[#0A121F] rounded-[32px] p-3 border border-[#20375C] ring-1 ring-[#223552] flex flex-col justify-between shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+<div class="bg-[#050B16] rounded-[24px] p-4 flex flex-col justify-between flex-1 border border-[#223552]/50">
+<div class="space-y-3">
+<div class="flex items-center justify-between text-[10px] text-[#9AA8C2]">
+<span>09:41</span>
+<span class="text-[#F5D38A] font-semibold">SCREEN 04</span>
+</div>
+<div>
+<span class="text-[10px] text-[#D6A84F] uppercase font-bold tracking-wider">Step 4</span>
+<h4 class="text-sm font-bold text-white">You're almost there.</h4>
+<p class="text-[11px] text-[#9AA8C2]">Checklist summary</p>
+</div>
+<div class="space-y-1.5 text-[10px]">
+<div class="flex items-center justify-between p-1.5 rounded-lg bg-[#0C192E]">
+<span class="text-white">Identity</span>
+<span class="material-symbols-outlined text-[#F5D38A] text-[14px]">check_circle</span>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded-lg bg-[#0C192E]">
+<span class="text-white">Details</span>
+<span class="material-symbols-outlined text-[#F5D38A] text-[14px]">check_circle</span>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded-lg bg-[#0C192E]">
+<span class="text-white">Bank</span>
+<span class="material-symbols-outlined text-[#F5D38A] text-[14px]">check_circle</span>
+</div>
+</div>
+</div>
+<button class="mt-5 w-full py-2.5 rounded-lg bg-[#155EEF] text-white text-[11px] font-bold uppercase tracking-wider flex items-center justify-center gap-1 shadow-md">
+<span>REVIEW &amp; eSIGN</span>
+<span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+</button>
+</div>
+<div class="w-16 h-1 bg-white/20 rounded-full mx-auto mt-2"></div>
+</div>
+<!-- SCREEN 05: READY / LIVE -->
+<div class="bg-[#0A121F] rounded-[32px] p-3 border border-[#D6A84F]/60 ring-1 ring-[#D6A84F]/40 flex flex-col justify-between shadow-[0_12px_35px_rgba(214,168,79,0.2)] hover:-translate-y-1.5 transition-all duration-300">
+<div class="bg-[#050B16] rounded-[24px] p-4 flex flex-col justify-between flex-1 border border-[#223552]/50 text-center">
+<div class="space-y-3">
+<div class="flex items-center justify-between text-[10px] text-[#9AA8C2]">
+<span>09:41</span>
+<span class="text-[#F5D38A] font-semibold">SCREEN 05</span>
+</div>
+<!-- Luminous Gold Emblem -->
+<div class="w-12 h-12 rounded-full bg-[#D6A84F]/20 border border-[#D6A84F] mx-auto flex items-center justify-center shadow-[0_0_15px_rgba(214,168,79,0.3)]">
+<span class="material-symbols-outlined text-[#F5D38A] text-[24px]">verified</span>
+</div>
+<div>
+<h4 class="text-base font-bold text-white">You're Ready.</h4>
+<p class="text-[11px] text-[#9AA8C2] mt-1 leading-snug">
+                    Your Motisons account journey is complete.
+                  </p>
+</div>
+<div class="p-2 rounded-xl bg-[#0C192E] border border-[#223552] text-[10px]">
+<span class="text-[#9AA8C2]">Client Code: </span>
+<span class="text-[#F5D38A] font-bold">MOTI-84920</span>
+</div>
+</div>
+<button class="mt-5 w-full py-2.5 rounded-lg bg-gradient-to-r from-[#155EEF] to-[#D6A84F] text-white text-[11px] font-bold uppercase tracking-wider flex items-center justify-center gap-1 shadow-md">
+<span>START INVESTING</span>
+<span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+</button>
+</div>
+<div class="w-16 h-1 bg-white/20 rounded-full mx-auto mt-2"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- FINAL CTA: MINIMAL DRAMATIC MIDNIGHT NAVY BLOCK -->
+<section class="w-full py-24 bg-[#050B16] relative overflow-hidden">
+<!-- Champagne Gold Radial Glow -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-[600px] h-[350px] bg-[#D6A84F]/10 rounded-full blur-[140px]"></div>
+</div>
+<div class="max-w-4xl mx-auto px-6 text-center relative z-10 flex flex-col items-center gap-6">
+<!-- Subtle Gold Crest Accent -->
+<div class="w-12 h-12 rounded-2xl bg-[#0C192E] border border-[#D6A84F]/50 flex items-center justify-center shadow-[0_0_20px_rgba(214,168,79,0.2)]">
+<span class="material-symbols-outlined text-[#F5D38A] text-[24px]">diamond</span>
+</div>
+<div class="space-y-2">
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+            Open Your Account. The Simpler Way.
+          </h2>
+<p class="text-lg text-[#9AA8C2] max-w-lg mx-auto">
+            Experience the new Motisons digital onboarding journey.
+          </p>
+</div>
+<div class="pt-2">
+<a class="px-9 py-4 rounded-xl bg-[#155EEF] hover:bg-[#1250cf] border border-[#D6A84F]/50 text-white font-bold text-base tracking-wide shadow-[0_0_30px_rgba(21,94,239,0.4)] hover:shadow-[0_0_35px_rgba(214,168,79,0.3)] transition-all inline-flex items-center gap-3 group" href="#screens">
+<span>START NOW</span>
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1 text-[#F5D38A]">arrow_forward</span>
+</a>
+</div>
+<p class="text-xs text-[#9AA8C2] tracking-wider uppercase pt-4">
+          SEBI Regulated • Digital-first onboarding • Secure verification
+        </p>
+</div>
+</section>
+</main>
+<!-- CLEAN REGULATORY FOOTER -->
+<footer class="w-full bg-[#050B16] border-t border-[#223552]/70 py-10">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-3">
+<div class="w-6 h-6 rounded-md bg-[#0C192E] border border-[#D6A84F]/40 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#F5D38A] text-[14px]">diamond</span>
+</div>
+<span class="text-xs font-semibold text-white tracking-wider">MOTISONS SHARES</span>
+<span class="text-xs text-[#9AA8C2]">| SEBI Reg. INZ000012534</span>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-6 text-xs text-[#9AA8C2]">
+<span>Digital Onboarding Architecture</span>
+<span class="w-1 h-1 rounded-full bg-[#3F5170]"></span>
+<span>CDSL Depository Services</span>
+<span class="w-1 h-1 rounded-full bg-[#3F5170]"></span>
+<a class="hover:text-[#F5D38A] transition-colors" href="mailto:support@motisons.com">support@motisons.com</a>
+</div>
+<div class="text-xs text-[#9AA8C2] text-center md:text-right">
+        © 2025 Motisons Shares. All rights reserved.
+      </div>
+</div>
+</footer>
+<!-- Global Prototype Switcher -->
+<script src="switcher.js"></script>
+</body></html>
