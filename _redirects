@@ -1,6 +1,9 @@
 # Netlify Pretty URL Rewrites for Motisons Mockups
-/one      /one.html      200
-/two      /two.html      200
-/three    /three.html    200
-/four     /four.html     200
-/hub      /index.html    200
+/one              /one.html              200
+/two              /two.html              200
+/three            /three.html            200
+/four             /four.html             200
+/b2b-gallery      /b2b-gallery.html      200
+/market-updates   /market-updates.html   200
+/advisory         /advisory.html         200
+/hub              /index.html            200

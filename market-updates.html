@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html class="scroll-smooth dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Motisons Shares | Market Updates — Powered by Gemini AI</title>
+  <meta name="description" content="Real-time institutional market intelligence, morning bell briefings, and AI financial analysis powered by Gemini."/>
+  
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            midnight: "#050B16",
+            navy: "#081426",
+            "navy-card": "#0C1D36",
+            "navy-border": "#1A2D4C",
+            gold: "#D6A84F",
+            "gold-light": "#F1D58A",
+            "gold-dark": "#9A7328",
+            gemini: "#38BDF8",
+            "gemini-purple": "#A855F7",
+            motiblue: "#155EEF",
+            electric: "#3B82F6",
+            cream: "#F8FAFC"
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+            serif: ['"Cinzel"', 'serif'],
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      background-color: #050B16;
+      color: #F8FAFC;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    .gemini-gradient-text {
+      background: linear-gradient(135deg, #38BDF8 0%, #818CF8 50%, #C084FC 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FFF0CA 0%, #D6A84F 50%, #9A7328 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gemini-glow {
+      box-shadow: 0 0 50px -10px rgba(56, 189, 248, 0.35);
+    }
+  </style>
+</head>
+<body class="bg-midnight text-cream min-h-screen flex flex-col justify-between selection:bg-gemini selection:text-midnight">
+
+  <!-- TOP HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-8 py-3.5 bg-midnight/90 backdrop-blur-2xl border-b border-white/10">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+      
+      <!-- Logo -->
+      <a class="flex items-center gap-3 group" href="index.html" title="Back to Motisons Prototype Hub">
+        <img src="assets/motisons-logo.png" alt="Motisons Shares" class="h-9 sm:h-11 w-auto object-contain drop-shadow-[0_0_12px_rgba(214,168,79,0.3)] group-hover:scale-105 transition-transform"/>
+      </a>
+
+      <!-- Center Pill -->
+      <div class="hidden md:flex items-center gap-2 px-4 py-1.5 rounded-full bg-navy border border-gemini/30 shadow-[0_0_15px_rgba(56,189,248,0.2)]">
+        <span class="w-2 h-2 rounded-full bg-gemini animate-ping"></span>
+        <span class="text-xs font-bold text-gemini tracking-wider uppercase">Market Updates — Gemini AI</span>
+        <span class="text-xs text-slate-400">• Real-Time Institutional Synthesis</span>
+      </div>
+
+      <!-- Action -->
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-semibold text-slate-300 hover:text-white transition-all flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">arrow_back</span>
+          <span>Back to Hub</span>
+        </a>
+        <a href="#ask-gemini" class="px-4 py-2 rounded-xl bg-gradient-to-r from-sky-400 to-indigo-500 text-white font-bold text-xs uppercase tracking-wider flex items-center gap-1.5 shadow-[0_0_20px_rgba(56,189,248,0.4)] hover:scale-105 transition-all">
+          <span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+          <span>Ask Gemini</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN WRAPPER -->
+  <main class="w-full pt-28 pb-20 flex-1">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <!-- HERO BANNER -->
+      <div class="mb-12 text-left flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-8">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-navy border border-gemini/30 mb-3">
+            <span class="material-symbols-outlined text-gemini text-sm">psychology</span>
+            <span class="text-[11px] font-bold text-gemini uppercase tracking-widest">Next-Gen Intelligence Engine</span>
+          </div>
+          <h1 class="font-display text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            Market Updates <span class="gemini-gradient-text">&amp; Intelligence</span>
+          </h1>
+          <p class="text-slate-300 text-sm sm:text-base max-w-2xl mt-2 leading-relaxed">
+            Continuous synthesis of NSE, BSE, MCX order book dynamics, macroeconomic prints, and institutional capital flows powered by Gemini AI.
+          </p>
+        </div>
+
+        <!-- Live Market Status Pill -->
+        <div class="p-4 rounded-2xl bg-navy-card/90 border border-gold/30 shadow-xl flex items-center gap-4">
+          <div class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold text-white">NSE / BSE LIVE</span>
+              <span class="text-[10px] bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded font-mono font-bold">BULLISH BIAS</span>
+            </div>
+            <span class="text-[11px] text-slate-400 font-mono">Last Synchronized: Real-time Data Stream</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 1: GEMINI SENTIMENT RADAR (4 KEY TILES) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+        
+        <div class="p-5 rounded-2xl bg-navy-card/80 border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
+              <span class="uppercase tracking-wider font-semibold">Gemini Stance</span>
+              <span class="material-symbols-outlined text-gemini text-sm">auto_awesome</span>
+            </div>
+            <span class="font-display text-2xl font-bold text-emerald-400">78% Bullish</span>
+            <p class="text-xs text-slate-300 mt-2">Strong institutional accumulation across banking and capital goods.</p>
+          </div>
+          <div class="w-full bg-navy rounded-full h-1.5 mt-4 overflow-hidden">
+            <div class="bg-emerald-400 h-full rounded-full" style="width: 78%"></div>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-navy-card/80 border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
+              <span class="uppercase tracking-wider font-semibold">FII / DII Net Flow</span>
+              <span class="material-symbols-outlined text-gold text-sm">account_balance</span>
+            </div>
+            <span class="font-display text-2xl font-bold text-gold">+₹3,180 Cr</span>
+            <p class="text-xs text-slate-300 mt-2">DIIs absorb intraday supply; FIIs net buyers in large-caps.</p>
+          </div>
+          <span class="text-[10px] text-gold-light font-mono mt-4 block">Net Positive Liquidity</span>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-navy-card/80 border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
+              <span class="uppercase tracking-wider font-semibold">India VIX (Volatility)</span>
+              <span class="material-symbols-outlined text-emerald-400 text-sm">speed</span>
+            </div>
+            <span class="font-display text-2xl font-bold text-white">13.12 <span class="text-xs text-emerald-400 font-semibold">-4.2%</span></span>
+            <p class="text-xs text-slate-300 mt-2">Low volatility regime favors trend-following positional setups.</p>
+          </div>
+          <span class="text-[10px] text-emerald-400 font-mono mt-4 block">Stable Volatility Climate</span>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-navy-card/80 border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
+              <span class="uppercase tracking-wider font-semibold">Motisons Shares Highlight</span>
+              <span class="material-symbols-outlined text-gold text-sm">diamond</span>
+            </div>
+            <span class="font-display text-2xl font-bold text-gold-light">+4.8% <span class="text-xs text-slate-400">Breakout</span></span>
+            <p class="text-xs text-slate-300 mt-2">High delivery volume on jewelry retail expansion &amp; broker synergy.</p>
+          </div>
+          <span class="text-[10px] text-gold font-mono mt-4 block">Strong Technical Base</span>
+        </div>
+
+      </div>
+
+      <!-- SECTION 2: MORNING BELL SYNTHESIS & SECTOR MOMENTUM -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
+        
+        <!-- LEFT: GEMINI MORNING BRIEF (LG: 7 COLS) -->
+        <div class="lg:col-span-7 p-6 sm:p-8 rounded-3xl bg-navy-card/90 border border-gemini/30 shadow-2xl backdrop-blur-xl flex flex-col justify-between">
+          
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-5">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-gemini">summarize</span>
+                <h3 class="font-display text-lg font-bold text-white">Gemini Daily Market Bell</h3>
+              </div>
+              <span class="text-[11px] font-mono text-gemini bg-sky-500/10 px-2.5 py-1 rounded-full border border-sky-400/30">AI Morning Note</span>
+            </div>
+
+            <h4 class="font-display text-xl sm:text-2xl font-bold text-white mb-3">
+              "Bulls Retain Grip as Nifty Eyes New Territorial Records; Metals &amp; Financials Lead Charge"
+            </h4>
+
+            <div class="space-y-3 text-sm text-slate-300 leading-relaxed">
+              <p>
+                <strong class="text-white">Global Cues:</strong> Wall Street indices closed in positive territory led by technology mega-caps. Brent Crude steadies near $74.5/barrel, eliminating immediate imported inflation risks for Indian macroeconomic accounts.
+              </p>
+              <p>
+                <strong class="text-white">Technical Pivot:</strong> Nifty 50 maintains a formidable support shelf at <span class="text-gemini font-mono font-bold">25,180</span>. An upside breach above <span class="text-gold font-mono font-bold">25,400</span> could open a high-probability glide path toward 25,650.
+              </p>
+              <p>
+                <strong class="text-white">Institutional Driver:</strong> Continuous systematic inflows via domestic retail SIPs (surpassing ₹23,000 Cr/month) create a persistent liquidity buffer against sporadic foreign pullbacks.
+              </p>
+            </div>
+          </div>
+
+          <!-- Key AI Actionable Takeaways Strip -->
+          <div class="mt-6 pt-5 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+            <div class="p-3 rounded-xl bg-navy/80 border border-white/5">
+              <span class="text-slate-400 block text-[10px] uppercase">Preferred Longs</span>
+              <span class="font-bold text-emerald-400 mt-1 block">Private Banks, Infra</span>
+            </div>
+            <div class="p-3 rounded-xl bg-navy/80 border border-white/5">
+              <span class="text-slate-400 block text-[10px] uppercase">Hedging Posture</span>
+              <span class="font-bold text-gold mt-1 block">SGB &amp; Sovereign Bonds</span>
+            </div>
+            <div class="p-3 rounded-xl bg-navy/80 border border-white/5">
+              <span class="text-slate-400 block text-[10px] uppercase">Risk Trigger</span>
+              <span class="font-bold text-rose-400 mt-1 block">Close below 24,950</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: SECTOR ROTATION MATRIX (LG: 5 COLS) -->
+        <div class="lg:col-span-5 p-6 sm:p-8 rounded-3xl bg-navy-card/90 border border-white/10 shadow-2xl backdrop-blur-xl flex flex-col justify-between">
+          
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-5">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-gold">pie_chart</span>
+                <h3 class="font-display text-lg font-bold text-white">Sector Momentum Heatmap</h3>
+              </div>
+              <span class="text-xs text-slate-400 font-mono">Live Ranks</span>
+            </div>
+
+            <div class="space-y-3">
+              
+              <div class="p-3.5 rounded-xl bg-navy/80 border border-emerald-500/30 flex items-center justify-between">
+                <div>
+                  <span class="font-display text-sm font-bold text-white">NIFTY BANK</span>
+                  <p class="text-[11px] text-slate-300">Large-cap credit expansion momentum</p>
+                </div>
+                <div class="text-right">
+                  <span class="font-mono text-sm font-bold text-emerald-400">+1.65%</span>
+                  <span class="text-[10px] bg-emerald-500/20 text-emerald-400 px-1.5 py-0.5 rounded font-bold uppercase block mt-0.5">Top Outperformer</span>
+                </div>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-navy/80 border border-emerald-500/30 flex items-center justify-between">
+                <div>
+                  <span class="font-display text-sm font-bold text-white">METALS &amp; JEWELRY</span>
+                  <p class="text-[11px] text-slate-300">Motisons lead, festive consumer volume</p>
+                </div>
+                <div class="text-right">
+                  <span class="font-mono text-sm font-bold text-emerald-400">+2.10%</span>
+                  <span class="text-[10px] bg-emerald-500/20 text-emerald-400 px-1.5 py-0.5 rounded font-bold uppercase block mt-0.5">High Demand</span>
+                </div>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-navy/80 border border-white/10 flex items-center justify-between">
+                <div>
+                  <span class="font-display text-sm font-bold text-white">NIFTY IT</span>
+                  <p class="text-[11px] text-slate-300">BFSI deal renewals &amp; Cloud integration</p>
+                </div>
+                <div class="text-right">
+                  <span class="font-mono text-sm font-bold text-sky-400">+0.82%</span>
+                  <span class="text-[10px] bg-sky-500/20 text-sky-400 px-1.5 py-0.5 rounded font-bold uppercase block mt-0.5">Steady Accumulation</span>
+                </div>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-navy/80 border border-white/10 flex items-center justify-between">
+                <div>
+                  <span class="font-display text-sm font-bold text-white">NIFTY AUTO</span>
+                  <p class="text-[11px] text-slate-300">Inventory digestion ahead of festive sales</p>
+                </div>
+                <div class="text-right">
+                  <span class="font-mono text-sm font-bold text-slate-300">-0.15%</span>
+                  <span class="text-[10px] bg-white/10 text-slate-300 px-1.5 py-0.5 rounded font-bold uppercase block mt-0.5">Neutral Consolidation</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-white/10 text-[11px] text-slate-400 flex items-center justify-between">
+            <span>Algorithmic Scan: 50 NSE Sectors</span>
+            <span class="text-gemini">Updated continuously</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- SECTION 3: INTERACTIVE "ASK GEMINI FINANCIAL AI" EXPERT DESK -->
+      <div id="ask-gemini" class="p-6 sm:p-10 rounded-3xl bg-gradient-to-b from-navy-card/90 via-navy/90 to-midnight/90 border border-gemini/40 shadow-2xl relative overflow-hidden mb-12">
+        <div class="absolute -top-12 -right-12 w-80 h-80 bg-gemini/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-3xl mb-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy border border-gemini/40 text-xs text-gemini font-bold uppercase tracking-wider mb-2">
+            <span class="material-symbols-outlined text-sm">chat_spark</span>
+            <span>Interactive AI Market Analyst</span>
+          </div>
+          <h3 class="font-display text-2xl sm:text-4xl font-extrabold text-white">
+            Ask Gemini About <span class="gemini-gradient-text">Any Market Signal</span>
+          </h3>
+          <p class="text-slate-300 text-xs sm:text-sm mt-1">
+            Tap a quick prompt chip or enter your specific stock, derivatives setup, or macroeconomic question below.
+          </p>
+        </div>
+
+        <!-- Quick Prompts Chips -->
+        <div class="flex flex-wrap items-center gap-2 mb-6">
+          <button onclick="askPrompt('What are today\'s key support & resistance levels for Nifty 50 and Bank Nifty?')" class="px-3.5 py-1.5 rounded-xl bg-navy border border-white/15 hover:border-gemini text-xs font-medium text-slate-300 hover:text-white transition-all flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[14px] text-gemini">tune</span>
+            <span>Nifty Support &amp; Resistance</span>
+          </button>
+
+          <button onclick="askPrompt('Analyze Motisons Shares & Jewellers momentum, retail expansion, and delivery volume.')" class="px-3.5 py-1.5 rounded-xl bg-navy border border-white/15 hover:border-gold text-xs font-medium text-slate-300 hover:text-white transition-all flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[14px] text-gold">diamond</span>
+            <span>Motisons Stock Breakdown</span>
+          </button>
+
+          <button onclick="askPrompt('How does the current RBI monetary stance influence Sovereign Gold Bonds vs Fixed Deposits?')" class="px-3.5 py-1.5 rounded-xl bg-navy border border-white/15 hover:border-gemini text-xs font-medium text-slate-300 hover:text-white transition-all flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[14px] text-amber-400">monetization_on</span>
+            <span>SGB vs Bank FDs</span>
+          </button>
+
+          <button onclick="askPrompt('Which sectors are showing the highest probability of institutional accumulation this quarter?')" class="px-3.5 py-1.5 rounded-xl bg-navy border border-white/15 hover:border-gemini text-xs font-medium text-slate-300 hover:text-white transition-all flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[14px] text-emerald-400">trending_up</span>
+            <span>Institutional Sector Bet</span>
+          </button>
+        </div>
+
+        <!-- Input Box -->
+        <div class="flex items-center bg-midnight border border-white/20 focus-within:border-gemini rounded-2xl p-2.5 shadow-2xl transition-all mb-6">
+          <span class="material-symbols-outlined text-gemini ml-3 mr-3">search_spark</span>
+          <input type="text" id="geminiQueryInput" class="w-full bg-transparent border-none text-white text-sm outline-none placeholder:text-slate-400" placeholder="Ask Gemini (e.g. Should I hedge my Nifty longs with Gold or Puts?)..." onkeydown="if(event.key === 'Enter') handleGeminiAsk()"/>
+          <button onclick="handleGeminiAsk()" class="px-6 py-2.5 rounded-xl bg-gradient-to-r from-sky-400 to-indigo-600 text-white font-bold text-xs uppercase tracking-wider shrink-0 hover:scale-105 transition-all shadow-[0_0_15px_rgba(56,189,248,0.4)]">
+            Analyze
+          </button>
+        </div>
+
+        <!-- AI Streaming Answer Box -->
+        <div id="aiResponseBox" class="p-6 rounded-2xl bg-navy/90 border border-gemini/30 shadow-xl space-y-3">
+          <div class="flex items-center justify-between border-b border-white/10 pb-3">
+            <div class="flex items-center gap-2">
+              <div class="w-6 h-6 rounded-lg bg-gradient-to-br from-sky-400 to-purple-500 flex items-center justify-center text-white text-xs font-bold">G</div>
+              <span class="font-display text-sm font-bold text-white" id="aiResponseTitle">Gemini AI Institutional Synthesis</span>
+            </div>
+            <span class="text-[10px] text-gemini font-mono">Confidence: 94.6%</span>
+          </div>
+
+          <div class="text-sm text-slate-300 leading-relaxed space-y-2" id="aiResponseText">
+            <p>
+              <strong class="text-white">Nifty 50 Levels:</strong> The immediate pivotal support stands at <span class="text-gemini font-mono font-bold">25,180</span> (20-day EMA confluence). Critical ceiling resistance is placed at <span class="text-gold font-mono font-bold">25,390 - 25,440</span>.
+            </p>
+            <p>
+              <strong class="text-white">Derivative Structure:</strong> Maximum call open interest sits at 25,500 Strike while highest put open interest base is concentrated at 25,000 Strike, indicating a comfortable 500-point buffer for the current weekly expiry.
+            </p>
+            <p>
+              <strong class="text-white">Actionable Rationale:</strong> Trailing stop losses for directional long positions are recommended at 25,140. Consider deploying bull call spreads to monetize elevated implied volatility safely.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CORPORATE FOOTER -->
+  <footer class="bg-midnight border-t border-white/10 py-10 px-4 text-center text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <img src="assets/motisons-logo.png" alt="Motisons Shares" class="h-6 object-contain"/>
+        <span>• Gemini Market Intelligence Node</span>
+      </div>
+      <p>© 2026 Motisons Shares &amp; Stocks Pvt. Ltd. Statutory SEBI Disclosure: Market investments are subject to market risks.</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT FOR INTERACTIVE AI RESPONSES -->
+  <script>
+    const knowledgeBase = {
+      nifty: {
+        title: "Gemini Analysis: Nifty 50 & Bank Nifty Technical Zones",
+        text: "<p><strong class='text-white'>Nifty 50:</strong> Immediate pivotal support stands at <span class='text-gemini font-mono font-bold'>25,180</span> (20-EMA). Upper breakout threshold is <span class='text-gold font-mono font-bold'>25,420</span>. A clean close above unlocks 25,650.</p><p><strong class='text-white'>Bank Nifty:</strong> Displays relative outperformance with critical support at <span class='text-gemini font-mono font-bold'>51,800</span> and resistance near 52,600. Heavyweight banks remain net accumulators.</p><p><strong class='text-white'>Hedging Strategy:</strong> Maintain trailing stop loss at 25,140 spot. Utilize Bull Call Spreads to limit delta risk.</p>"
+      },
+      motisons: {
+        title: "Gemini Analysis: Motisons Shares & Jewellers Synergy",
+        text: "<p><strong class='text-white'>Fundamental Driver:</strong> The synergistic combination of retail bullion jewelry demand and full-service stock broking provides resilient multi-stream cashflows.</p><p><strong class='text-white'>Technical Breakout:</strong> The counter registered an institutional volume spike of +240% against its 30-day average, establishing a formidable demand base.</p><p><strong class='text-white'>Advisory Stance:</strong> Favorable risk-reward for mid-to-long term wealth compounders with trailing stop at recent swing low.</p>"
+      },
+      sgb: {
+        title: "Gemini Analysis: Sovereign Gold Bonds vs Fixed Deposits",
+        text: "<p><strong class='text-white'>Real Post-Tax Yield:</strong> While Bank FDs offer ~7.0% taxable interest (effectively 4.9% in the 30% tax slab), SGBs provide <span class='text-gold font-mono font-bold'>2.5% semi-annual coupon + capital appreciation with 100% EXEMPTION</span> from capital gains tax at maturity.</p><p><strong class='text-white'>Inflation Protection:</strong> Historical domestic gold returns have outpaced CPI inflation by 4.2% annually over rolling 10-year windows.</p><p><strong class='text-white'>Conclusion:</strong> SGBs decisively win for wealth preservation with a 5-8 year horizon.</p>"
+      },
+      sectors: {
+        title: "Gemini Analysis: Institutional Capital Rotation",
+        text: "<p><strong class='text-white'>Top Focus 1 - Financials:</strong> Private banks and asset management companies are experiencing the highest FII net inflows due to clean balance sheets and credit growth expansion.</p><p><strong class='text-white'>Top Focus 2 - Capital Goods & Infrastructure:</strong> Driven by government capex and private expansion cycles.</p><p><strong class='text-white'>Tactical Allocation:</strong> 60% Banking & Infra, 25% Consumption/Jewelry, 15% Sovereign Bullion.</p>"
+      }
+    };
+
+    function askPrompt(question) {
+      document.getElementById('geminiQueryInput').value = question;
+      handleGeminiAsk();
+    }
+
+    function handleGeminiAsk() {
+      const q = (document.getElementById('geminiQueryInput').value || '').toLowerCase();
+      const resBox = document.getElementById('aiResponseBox');
+      const titleElem = document.getElementById('aiResponseTitle');
+      const textElem = document.getElementById('aiResponseText');
+
+      resBox.style.opacity = '0.4';
+      resBox.style.transform = 'scale(0.99)';
+
+      setTimeout(() => {
+        let matched = knowledgeBase.nifty;
+        if (q.includes('motisons') || q.includes('jewel')) {
+          matched = knowledgeBase.motisons;
+        } else if (q.includes('sgb') || q.includes('gold') || q.includes('fd') || q.includes('bond')) {
+          matched = knowledgeBase.sgb;
+        } else if (q.includes('sector') || q.includes('accumul') || q.includes('instit')) {
+          matched = knowledgeBase.sectors;
+        } else if (q.length > 5) {
+          matched = {
+            title: `Gemini Synthesis for "${document.getElementById('geminiQueryInput').value}"`,
+            text: `<p><strong class='text-white'>Institutional Overview:</strong> Based on comprehensive real-time processing of NSE/BSE tick feeds and macroeconomic parameters, the algorithmic consensus highlights steady risk-on liquidity.</p><p><strong class='text-white'>Capital Allocation Guidance:</strong> Favor low-beta bluechip holdings with disciplined trailing stop protection. Consider Motisons Wealth OS portfolio diversification to maximize compounding.</p>`
+          };
+        }
+
+        titleElem.innerText = matched.title;
+        textElem.innerHTML = matched.text;
+
+        resBox.style.opacity = '1';
+        resBox.style.transform = 'scale(1)';
+      }, 250);
+    }
+  </script>
+
+  <!-- Global Prototype Switcher -->
+  <script src="switcher.js"></script>
+</body>
+</html>

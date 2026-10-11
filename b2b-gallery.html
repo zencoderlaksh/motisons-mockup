@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html class="scroll-smooth dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Motisons Shares | B2B Partner Poster & Infographic Gallery</title>
+  <meta name="description" content="Official B2B Co-Branded Infographics & Poster Studio for Motisons Shares partners, sub-brokers, and wealth associates."/>
+  
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            midnight: "#050B16",
+            navy: "#081426",
+            "navy-card": "#0C1D36",
+            "navy-border": "#1A2D4C",
+            gold: "#D6A84F",
+            "gold-light": "#F1D58A",
+            "gold-dark": "#9A7328",
+            motiblue: "#155EEF",
+            electric: "#3B82F6",
+            cream: "#F8FAFC"
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+            serif: ['"Cinzel"', 'serif'],
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      background-color: #050B16;
+      color: #F8FAFC;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FFF0CA 0%, #D6A84F 50%, #9A7328 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .poster-card {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .poster-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.7), 0 0 25px rgba(214,168,79,0.2);
+    }
+    .poster-card.active {
+      border-color: #D6A84F;
+      box-shadow: 0 0 30px rgba(214,168,79,0.35);
+    }
+  </style>
+</head>
+<body class="bg-midnight text-cream min-h-screen flex flex-col justify-between selection:bg-gold selection:text-midnight">
+
+  <!-- TOP HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-8 py-3.5 bg-midnight/90 backdrop-blur-2xl border-b border-white/10">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+      
+      <!-- Logo -->
+      <a class="flex items-center gap-3 group" href="index.html" title="Back to Motisons Prototype Hub">
+        <img src="assets/motisons-logo.png" alt="Motisons Shares" class="h-9 sm:h-11 w-auto object-contain drop-shadow-[0_0_12px_rgba(214,168,79,0.3)] group-hover:scale-105 transition-transform"/>
+      </a>
+
+      <!-- Center Pill -->
+      <div class="hidden md:flex items-center gap-2 px-4 py-1.5 rounded-full bg-navy border border-gold/30">
+        <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+        <span class="text-xs font-bold text-gold tracking-wider uppercase">B2B Partner Media Studio</span>
+        <span class="text-xs text-slate-400">• Dynamic Co-Branded Infographics</span>
+      </div>
+
+      <!-- Action -->
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-semibold text-slate-300 hover:text-white transition-all flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">arrow_back</span>
+          <span>Back to Hub</span>
+        </a>
+        <button onclick="downloadPoster()" class="px-4 py-2 rounded-xl bg-gradient-to-r from-gold via-gold-light to-gold text-midnight font-bold text-xs uppercase tracking-wider flex items-center gap-1.5 shadow-[0_0_20px_rgba(214,168,79,0.4)] hover:scale-105 transition-all">
+          <span class="material-symbols-outlined text-[16px]">download</span>
+          <span>Download PNG</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN WRAPPER -->
+  <main class="w-full pt-28 pb-20 flex-1">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <!-- HERO BANNER -->
+      <div class="mb-10 text-left">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy border border-gold/30 mb-3">
+          <span class="material-symbols-outlined text-gold text-sm">palette</span>
+          <span class="text-[11px] font-bold text-gold uppercase tracking-widest">Co-Branded Marketing Collateral</span>
+        </div>
+        <h1 class="font-display text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          B2B Partner Infographic <span class="gold-gradient-text">&amp; Poster Studio</span>
+        </h1>
+        <p class="text-slate-300 text-sm sm:text-base max-w-3xl mt-2 leading-relaxed">
+          Designed exclusively for Motisons authorized partners, sub-brokers, and financial advisors. Select an institutional infographic, stamp your firm name and contact info, and instantly generate client-ready social media posters.
+        </p>
+      </div>
+
+      <!-- WORKSPACE: 2 COLUMNS (CONTROLS & LIVE CANVAS PREVIEW) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- LEFT COLUMN: CO-BRANDING CONTROLS (LG: 5 COLUMNS) -->
+        <div class="lg:col-span-5 flex flex-col gap-6">
+          
+          <!-- PARTNER CUSTOMIZATION FORM -->
+          <div class="p-6 rounded-2xl bg-navy-card/90 border border-gold/30 shadow-xl backdrop-blur-xl">
+            <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-5">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-gold">badge</span>
+                <h3 class="font-display text-base font-bold text-white">Your Partner Credentials</h3>
+              </div>
+              <span class="text-[10px] font-mono text-gold-light bg-gold/10 px-2 py-0.5 rounded border border-gold/30">Auto Sync</span>
+            </div>
+
+            <div class="space-y-4 text-xs">
+              <div>
+                <label class="block font-semibold text-slate-300 uppercase tracking-wider mb-1.5 text-[11px]">Partner Firm / Brand Name</label>
+                <input type="text" id="partnerFirm" value="Apex Wealth Capital" oninput="updatePosterLive()" class="w-full bg-navy border border-white/15 focus:border-gold rounded-xl px-3.5 py-2.5 text-white text-xs outline-none focus:ring-1 focus:ring-gold transition-all" placeholder="e.g. Apex Wealth Management"/>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block font-semibold text-slate-300 uppercase tracking-wider mb-1.5 text-[11px]">Advisor / Principal</label>
+                  <input type="text" id="partnerAdvisor" value="Rajesh Sharma, CFP" oninput="updatePosterLive()" class="w-full bg-navy border border-white/15 focus:border-gold rounded-xl px-3.5 py-2.5 text-white text-xs outline-none focus:ring-1 focus:ring-gold transition-all" placeholder="e.g. Rahul Verma"/>
+                </div>
+                <div>
+                  <label class="block font-semibold text-slate-300 uppercase tracking-wider mb-1.5 text-[11px]">Partner AP / ARN Code</label>
+                  <input type="text" id="partnerCode" value="AP-084920 / ARN-119420" oninput="updatePosterLive()" class="w-full bg-navy border border-white/15 focus:border-gold rounded-xl px-3.5 py-2.5 text-white text-xs outline-none focus:ring-1 focus:ring-gold transition-all" placeholder="e.g. AP-094821"/>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block font-semibold text-slate-300 uppercase tracking-wider mb-1.5 text-[11px]">WhatsApp / Mobile No.</label>
+                  <input type="text" id="partnerPhone" value="+91 98290 88776" oninput="updatePosterLive()" class="w-full bg-navy border border-white/15 focus:border-gold rounded-xl px-3.5 py-2.5 text-white text-xs outline-none focus:ring-1 focus:ring-gold transition-all" placeholder="+91 98765 43210"/>
+                </div>
+                <div>
+                  <label class="block font-semibold text-slate-300 uppercase tracking-wider mb-1.5 text-[11px]">City / Location</label>
+                  <input type="text" id="partnerCity" value="Jaipur / Mumbai" oninput="updatePosterLive()" class="w-full bg-navy border border-white/15 focus:border-gold rounded-xl px-3.5 py-2.5 text-white text-xs outline-none focus:ring-1 focus:ring-gold transition-all" placeholder="Jaipur / Mumbai"/>
+                </div>
+              </div>
+
+              <div>
+                <label class="block font-semibold text-slate-300 uppercase tracking-wider mb-1.5 text-[11px]">Custom Call to Action / Tagline</label>
+                <input type="text" id="partnerTagline" value="Book Free Financial Health Audit Today" oninput="updatePosterLive()" class="w-full bg-navy border border-white/15 focus:border-gold rounded-xl px-3.5 py-2.5 text-white text-xs outline-none focus:ring-1 focus:ring-gold transition-all" placeholder="Call for Personalized Portfolio Review"/>
+              </div>
+            </div>
+
+            <!-- Pre-fill presets -->
+            <div class="flex items-center gap-2 pt-4 mt-4 border-t border-white/10 text-[11px]">
+              <span class="text-slate-400 font-medium">Quick Presets:</span>
+              <button onclick="setPartnerPreset('Apex Wealth Capital', 'Rajesh Sharma, CFP', 'AP-084920', '+91 98290 88776', 'Jaipur')" class="px-2.5 py-1 rounded-lg bg-white/5 hover:bg-gold/20 text-slate-300 hover:text-gold transition-colors">Apex</button>
+              <button onclick="setPartnerPreset('Fortuna Financial Desk', 'Amit Singhania', 'AP-039182', '+91 98110 44332', 'Mumbai')" class="px-2.5 py-1 rounded-lg bg-white/5 hover:bg-gold/20 text-slate-300 hover:text-gold transition-colors">Fortuna</button>
+              <button onclick="setPartnerPreset('Zenith Capital Advisors', 'Priya Kothari', 'AP-057291', '+91 94140 22119', 'Delhi NCR')" class="px-2.5 py-1 rounded-lg bg-white/5 hover:bg-gold/20 text-slate-300 hover:text-gold transition-colors">Zenith</button>
+            </div>
+          </div>
+
+          <!-- POSTER TEMPLATE SELECTOR -->
+          <div class="p-6 rounded-2xl bg-navy-card/90 border border-white/10 shadow-xl backdrop-blur-xl">
+            <div class="flex items-center justify-between pb-3 border-b border-white/10 mb-4">
+              <h3 class="font-display text-base font-bold text-white">Choose Poster Theme</h3>
+              <span class="text-xs text-slate-400">6 Templates</span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3" id="templateGrid">
+              
+              <!-- Template 1 -->
+              <div onclick="selectTemplate(0)" class="poster-card active p-3 rounded-xl bg-navy border border-gold/40 cursor-pointer flex flex-col justify-between">
+                <div class="flex items-center gap-2 text-gold text-xs font-bold mb-1">
+                  <span class="material-symbols-outlined text-[16px]">show_chart</span>
+                  <span>Market Wrap</span>
+                </div>
+                <p class="text-[11px] text-slate-300">Daily Nifty &amp; Sensex momentum highlights</p>
+                <span class="text-[10px] text-gold-light mt-2 block font-mono">Daily Updates</span>
+              </div>
+
+              <!-- Template 2 -->
+              <div onclick="selectTemplate(1)" class="poster-card p-3 rounded-xl bg-navy border border-white/10 cursor-pointer flex flex-col justify-between">
+                <div class="flex items-center gap-2 text-electric text-xs font-bold mb-1">
+                  <span class="material-symbols-outlined text-[16px]">savings</span>
+                  <span>SIP Power</span>
+                </div>
+                <p class="text-[11px] text-slate-300">₹10K/mo compounding to ₹61L wealth</p>
+                <span class="text-[10px] text-electric mt-2 block font-mono">Wealth Edu</span>
+              </div>
+
+              <!-- Template 3 -->
+              <div onclick="selectTemplate(2)" class="poster-card p-3 rounded-xl bg-navy border border-white/10 cursor-pointer flex flex-col justify-between">
+                <div class="flex items-center gap-2 text-amber-400 text-xs font-bold mb-1">
+                  <span class="material-symbols-outlined text-[16px]">monetization_on</span>
+                  <span>SGB Gold</span>
+                </div>
+                <p class="text-[11px] text-slate-300">2.5% RBI interest &amp; zero capital gains tax</p>
+                <span class="text-[10px] text-amber-400 mt-2 block font-mono">Product Desk</span>
+              </div>
+
+              <!-- Template 4 -->
+              <div onclick="selectTemplate(3)" class="poster-card p-3 rounded-xl bg-navy border border-white/10 cursor-pointer flex flex-col justify-between">
+                <div class="flex items-center gap-2 text-purple-400 text-xs font-bold mb-1">
+                  <span class="material-symbols-outlined text-[16px]">rocket_launch</span>
+                  <span>IPO Alert</span>
+                </div>
+                <p class="text-[11px] text-slate-300">High-speed UPI allotment with Motisons</p>
+                <span class="text-[10px] text-purple-400 mt-2 block font-mono">Primary Market</span>
+              </div>
+
+              <!-- Template 5 -->
+              <div onclick="selectTemplate(4)" class="poster-card p-3 rounded-xl bg-navy border border-white/10 cursor-pointer flex flex-col justify-between">
+                <div class="flex items-center gap-2 text-emerald-400 text-xs font-bold mb-1">
+                  <span class="material-symbols-outlined text-[16px]">pie_chart</span>
+                  <span>Asset Pyramid</span>
+                </div>
+                <p class="text-[11px] text-slate-300">Equity 50%, Debt 30%, Gold 20% rule</p>
+                <span class="text-[10px] text-emerald-400 mt-2 block font-mono">Advisory</span>
+              </div>
+
+              <!-- Template 6 -->
+              <div onclick="selectTemplate(5)" class="poster-card p-3 rounded-xl bg-navy border border-white/10 cursor-pointer flex flex-col justify-between">
+                <div class="flex items-center gap-2 text-rose-400 text-xs font-bold mb-1">
+                  <span class="material-symbols-outlined text-[16px]">celebration</span>
+                  <span>Muhurat Desk</span>
+                </div>
+                <p class="text-[11px] text-slate-300">Festive greetings &amp; wealth blessings</p>
+                <span class="text-[10px] text-rose-400 mt-2 block font-mono">Festive / HNI</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: LIVE CO-BRANDED POSTER CANVAS (LG: 7 COLUMNS) -->
+        <div class="lg:col-span-7 flex flex-col items-center">
+          
+          <!-- POSTER CONTAINER -->
+          <div class="w-full max-w-[560px] p-4 sm:p-6 rounded-3xl bg-navy-card/80 border border-gold/30 shadow-[0_20px_60px_rgba(0,0,0,0.8)] backdrop-blur-2xl flex flex-col items-center">
+            
+            <div class="w-full flex items-center justify-between pb-3 mb-3 border-b border-white/10 text-xs">
+              <span class="font-bold text-gold uppercase tracking-wider flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px]">visibility</span>
+                <span>Live Co-Branded Preview</span>
+              </span>
+              <span class="text-[11px] font-mono text-slate-400">1080 x 1350 High Res</span>
+            </div>
+
+            <!-- HTML5 CANVAS FOR INSTANT REAL PNG GENERATION (hidden / synchronized) -->
+            <canvas id="posterCanvas" width="1080" height="1350" class="hidden"></canvas>
+
+            <!-- LIVE VISUAL POSTER FRAME -->
+            <div id="visualPoster" class="w-full rounded-2xl bg-midnight border border-gold/40 shadow-2xl p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden text-left" style="min-height: 600px;">
+              
+              <!-- Subtle Background Ambient Lighting -->
+              <div class="absolute -top-10 -right-10 w-64 h-64 bg-gold/15 rounded-full blur-3xl pointer-events-none"></div>
+              <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-motiblue/15 rounded-full blur-3xl pointer-events-none"></div>
+              
+              <!-- TOP BRANDING BAR (Official Motisons Logo) -->
+              <div class="flex items-center justify-between pb-4 border-b border-white/10 relative z-10">
+                <div class="flex items-center gap-2">
+                  <img src="assets/motisons-logo.png" alt="Motisons Shares" class="h-8 sm:h-9 object-contain drop-shadow-[0_0_10px_rgba(214,168,79,0.3)]"/>
+                </div>
+                <div class="text-right">
+                  <span class="text-[9px] font-bold text-gold tracking-widest uppercase block">SEBI REG. INZ000289135</span>
+                  <span class="text-[9px] text-slate-400 font-mono block">NSE • BSE • MCX • CDSL</span>
+                </div>
+              </div>
+
+              <!-- POSTER DYNAMIC CONTENT BODY -->
+              <div class="py-6 relative z-10 space-y-4" id="posterContentArea">
+                
+                <!-- Category Eyebrow -->
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-navy border border-gold/40 text-[10px] font-bold text-gold uppercase tracking-widest" id="pvBadge">
+                  DAILY MARKET WRAP
+                </div>
+
+                <!-- Main Poster Headline -->
+                <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-white leading-tight" id="pvHeadline">
+                  Nifty Touches Record Highs.<br/>
+                  <span class="gold-gradient-text" id="pvHeadlineGold">Capitalise on Bullish Momentum.</span>
+                </h2>
+
+                <!-- Subtitle / Highlights Box -->
+                <div class="p-4 rounded-xl bg-navy/80 border border-white/10 space-y-2 text-xs" id="pvBodyBox">
+                  <div class="flex items-center justify-between">
+                    <span class="text-slate-300 font-medium">NIFTY 50</span>
+                    <span class="text-emerald-400 font-bold font-mono">+1.24% ▲ 25,340</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="text-slate-300 font-medium">BSE SENSEX</span>
+                    <span class="text-emerald-400 font-bold font-mono">+1.18% ▲ 83,180</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="text-slate-300 font-medium">FII Net Inflow</span>
+                    <span class="text-gold font-bold font-mono">+₹2,480 Cr</span>
+                  </div>
+                </div>
+
+                <p class="text-xs text-slate-300 leading-relaxed font-normal" id="pvDescription">
+                  Institutional accumulation remains resilient in banking and capital goods. Align your portfolio with researched bluechip growth.
+                </p>
+
+              </div>
+
+              <!-- BOTTOM CO-BRANDING STAMP (YOUR PARTNER INFO) -->
+              <div class="mt-4 pt-4 border-t-2 border-gold/40 bg-navy/90 p-4 rounded-xl relative z-10 shadow-lg flex flex-col gap-2">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <span class="text-[9px] font-bold tracking-wider uppercase text-gold block">CO-BRANDED WEALTH PARTNER</span>
+                    <h4 class="font-display text-sm sm:text-base font-bold text-white" id="pvPartnerFirm">Apex Wealth Capital</h4>
+                  </div>
+                  <div class="text-right">
+                    <span class="text-[10px] font-bold text-gold-light bg-gold/15 px-2 py-0.5 rounded border border-gold/30 uppercase" id="pvPartnerCode">AP-084920</span>
+                  </div>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-white/10 text-[10px] text-slate-300">
+                  <div class="flex items-center gap-1.5 text-white font-medium">
+                    <span class="material-symbols-outlined text-[13px] text-gold">person</span>
+                    <span id="pvPartnerAdvisor">Rajesh Sharma, CFP</span>
+                  </div>
+                  <div class="flex items-center gap-1.5 text-emerald-400 font-bold">
+                    <span class="material-symbols-outlined text-[13px] text-emerald-400">call</span>
+                    <span id="pvPartnerPhone">+91 98290 88776</span>
+                  </div>
+                  <div class="flex items-center gap-1 text-slate-400">
+                    <span class="material-symbols-outlined text-[13px] text-slate-400">location_on</span>
+                    <span id="pvPartnerCity">Jaipur / Mumbai</span>
+                  </div>
+                </div>
+
+                <!-- Custom CTA Tagline -->
+                <div class="text-center pt-1 text-[10px] font-bold text-gold-light tracking-wide italic" id="pvTagline">
+                  "Book Free Financial Health Audit Today"
+                </div>
+              </div>
+
+            </div>
+
+            <!-- EXPORT ACTION BUTTONS -->
+            <div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-3 mt-5">
+              <button onclick="downloadPoster()" class="w-full py-3 rounded-xl bg-gradient-to-r from-gold via-gold-light to-gold text-midnight font-extrabold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(214,168,79,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all">
+                <span class="material-symbols-outlined text-[18px]">download</span>
+                <span>Download Co-Branded PNG</span>
+              </button>
+
+              <button onclick="shareWhatsApp()" class="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-lg transition-all">
+                <span class="material-symbols-outlined text-[18px]">chat</span>
+                <span>Share On WhatsApp</span>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CORPORATE FOOTER -->
+  <footer class="bg-midnight border-t border-white/10 py-10 px-4 text-center text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <img src="assets/motisons-logo.png" alt="Motisons Shares" class="h-6 object-contain"/>
+        <span>• B2B Authorized Partner Ecosystem</span>
+      </div>
+      <p>© 2026 Motisons Shares &amp; Stocks Pvt. Ltd. Confidential B2B Marketing Engine.</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT FOR POSTER LOGIC & CANVAS DOWNLOAD -->
+  <script>
+    const templates = [
+      {
+        badge: "DAILY MARKET WRAP",
+        headline: "Nifty Touches Record Highs.",
+        headlineGold: "Capitalise on Bullish Momentum.",
+        bodyItems: [
+          { label: "NIFTY 50", val: "+1.24% ▲ 25,340", col: "#34D399" },
+          { label: "BSE SENSEX", val: "+1.18% ▲ 83,180", col: "#34D399" },
+          { label: "FII Net Inflow", val: "+₹2,480 Cr", col: "#D6A84F" }
+        ],
+        desc: "Institutional accumulation remains resilient in banking and capital goods. Align your portfolio with researched bluechip growth."
+      },
+      {
+        badge: "WEALTH EDUCATION",
+        headline: "The Power of Starting Early.",
+        headlineGold: "₹10,000 Monthly SIP Magic.",
+        bodyItems: [
+          { label: "Invested Over 15 Yrs", val: "₹18,00,000", col: "#94A3B8" },
+          { label: "Est. Value @ 14% CAGR", val: "₹61,24,000", col: "#34D399" },
+          { label: "Pure Wealth Generated", val: "₹43,24,000", col: "#D6A84F" }
+        ],
+        desc: "Compounding works hardest when you give it time. Start your wealth creation journey with curated Mutual Fund portfolios."
+      },
+      {
+        badge: "SOVEREIGN GOLD BONDS",
+        headline: "Sovereign Gold Bonds (SGB).",
+        headlineGold: "2.5% RBI Interest + Gold Upside.",
+        bodyItems: [
+          { label: "Annual Extra Coupon", val: "2.5% p.a. Semi-Annual", col: "#F1D58A" },
+          { label: "Capital Gains Tax", val: "100% EXEMPT at Maturity", col: "#34D399" },
+          { label: "Storage & Purity Cost", val: "Zero Demat Holding Fee", col: "#38BDF8" }
+        ],
+        desc: "Don't let physical jewelry making charges erode your returns. Invest in pure sovereign gold directly backed by Reserve Bank of India."
+      },
+      {
+        badge: "PRIMARY MARKET DESK",
+        headline: "New IPO Allocation Open.",
+        headlineGold: "Apply In 3 Clicks via UPI.",
+        bodyItems: [
+          { label: "High Growth IPOs", val: "Institutional Grade Research", col: "#D6A84F" },
+          { label: "Allotment Speed", val: "Direct UPI Mandate Protocol", col: "#34D399" },
+          { label: "Paperwork", val: "Zero - 100% Digital", col: "#A78BFA" }
+        ],
+        desc: "Gain day-one access to India's most anticipated corporate market debutants with Motisons priority allotment advisory."
+      },
+      {
+        badge: "PORTFOLIO ARCHITECTURE",
+        headline: "The Golden Asset Rule.",
+        headlineGold: "Protect While You Grow.",
+        bodyItems: [
+          { label: "Equities & Mutual Funds", val: "50% Core Compounding", col: "#38BDF8" },
+          { label: "Sovereign Gold & Hedging", val: "20% Inflation Armor", col: "#F1D58A" },
+          { label: "AAA Bonds & Liquid Yield", val: "30% Safety Foundation", col: "#34D399" }
+        ],
+        desc: "A balanced asset allocation weathers market drawdowns while preserving executive purchasing power."
+      },
+      {
+        badge: "MUHURAT & FESTIVE WEALTH",
+        headline: "Shubh Aarambh With Motisons.",
+        headlineGold: "Prosperity For Generations.",
+        bodyItems: [
+          { label: "Heritage", val: "20+ Years Trusted Governance", col: "#D6A84F" },
+          { label: "Demat Setup", val: "Instant Paperless Activation", col: "#34D399" },
+          { label: "Advisory Desk", val: "Dedicated Relationship Manager", col: "#F472B6" }
+        ],
+        desc: "May this auspicious season usher infinite wealth, wisdom, and compounding for your family and enterprise."
+      }
+    ];
+
+    let currentTemplateIdx = 0;
+
+    function selectTemplate(idx) {
+      currentTemplateIdx = idx;
+      
+      const cards = document.querySelectorAll('.poster-card');
+      cards.forEach((c, i) => {
+        if (i === idx) {
+          c.classList.add('active', 'border-gold/40');
+          c.classList.remove('border-white/10');
+        } else {
+          c.classList.remove('active', 'border-gold/40');
+          c.classList.add('border-white/10');
+        }
+      });
+
+      renderTemplateData();
+    }
+
+    function renderTemplateData() {
+      const t = templates[currentTemplateIdx];
+      document.getElementById('pvBadge').innerText = t.badge;
+      document.getElementById('pvHeadline').innerHTML = `${t.headline}<br/><span class="gold-gradient-text">${t.headlineGold}</span>`;
+      document.getElementById('pvDescription').innerText = t.desc;
+
+      const bodyBox = document.getElementById('pvBodyBox');
+      bodyBox.innerHTML = t.bodyItems.map(item => `
+        <div class="flex items-center justify-between">
+          <span class="text-slate-300 font-medium">${item.label}</span>
+          <span class="font-bold font-mono" style="color: ${item.col};">${item.val}</span>
+        </div>
+      `).join('');
+
+      updatePosterLive();
+    }
+
+    function updatePosterLive() {
+      const firm = document.getElementById('partnerFirm').value || 'Apex Wealth Capital';
+      const adv = document.getElementById('partnerAdvisor').value || 'Rajesh Sharma, CFP';
+      const code = document.getElementById('partnerCode').value || 'AP-084920';
+      const phone = document.getElementById('partnerPhone').value || '+91 98290 88776';
+      const city = document.getElementById('partnerCity').value || 'Jaipur / Mumbai';
+      const tag = document.getElementById('partnerTagline').value || 'Book Free Financial Health Audit Today';
+
+      document.getElementById('pvPartnerFirm').innerText = firm;
+      document.getElementById('pvPartnerAdvisor').innerText = adv;
+      document.getElementById('pvPartnerCode').innerText = code;
+      document.getElementById('pvPartnerPhone').innerText = phone;
+      document.getElementById('pvPartnerCity').innerText = city;
+      document.getElementById('pvTagline').innerText = `"${tag}"`;
+    }
+
+    function setPartnerPreset(firm, adv, code, phone, city) {
+      document.getElementById('partnerFirm').value = firm;
+      document.getElementById('partnerAdvisor').value = adv;
+      document.getElementById('partnerCode').value = code;
+      document.getElementById('partnerPhone').value = phone;
+      document.getElementById('partnerCity').value = city;
+      updatePosterLive();
+    }
+
+    // Canvas Image Rendering for Real High-Res PNG Download
+    function downloadPoster() {
+      const canvas = document.getElementById('posterCanvas');
+      const ctx = canvas.getContext('2d');
+      const t = templates[currentTemplateIdx];
+
+      const firm = document.getElementById('partnerFirm').value || 'Apex Wealth Capital';
+      const adv = document.getElementById('partnerAdvisor').value || 'Rajesh Sharma, CFP';
+      const code = document.getElementById('partnerCode').value || 'AP-084920';
+      const phone = document.getElementById('partnerPhone').value || '+91 98290 88776';
+      const city = document.getElementById('partnerCity').value || 'Jaipur / Mumbai';
+      const tag = document.getElementById('partnerTagline').value || 'Book Free Financial Health Audit Today';
+
+      // 1. Draw Deep Navy/Midnight Background
+      const bgGrad = ctx.createLinearGradient(0, 0, 0, 1350);
+      bgGrad.addColorStop(0, '#050B16');
+      bgGrad.addColorStop(0.5, '#081426');
+      bgGrad.addColorStop(1, '#050B16');
+      ctx.fillStyle = bgGrad;
+      ctx.fillRect(0, 0, 1080, 1350);
+
+      // Gold Border Frame
+      ctx.strokeStyle = '#D6A84F';
+      ctx.lineWidth = 6;
+      ctx.strokeRect(30, 30, 1020, 1290);
+
+      // Subtle Glowing Orbs
+      ctx.fillStyle = 'rgba(214, 168, 79, 0.08)';
+      ctx.beginPath();
+      ctx.arc(900, 200, 250, 0, Math.PI * 2);
+      ctx.fill();
+
+      // 2. Load Motisons Logo
+      const logoImg = new Image();
+      logoImg.crossOrigin = 'anonymous';
+      logoImg.src = 'assets/motisons-logo.png';
+      logoImg.onload = function() {
+        ctx.drawImage(logoImg, 70, 70, 260, 90);
+
+        // Header Regulatory Text
+        ctx.fillStyle = '#D6A84F';
+        ctx.font = 'bold 20px "Plus Jakarta Sans", sans-serif';
+        ctx.textAlign = 'right';
+        ctx.fillText('SEBI REG. INZ000289135', 1010, 100);
+        ctx.fillStyle = '#94A3B8';
+        ctx.font = '18px "Plus Jakarta Sans", sans-serif';
+        ctx.fillText('NSE • BSE • MCX • CDSL', 1010, 130);
+
+        // Horizontal divider
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(70, 185);
+        ctx.lineTo(1010, 185);
+        ctx.stroke();
+
+        // 3. Category Badge
+        ctx.fillStyle = '#11223B';
+        ctx.strokeStyle = '#D6A84F';
+        ctx.lineWidth = 2;
+        ctx.roundRect(70, 220, 360, 48, 24);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.fillStyle = '#D6A84F';
+        ctx.font = 'bold 20px "Plus Jakarta Sans", sans-serif';
+        ctx.textAlign = 'left';
+        ctx.fillText(t.badge, 100, 252);
+
+        // 4. Headline
+        ctx.fillStyle = '#FFFFFF';
+        ctx.font = 'bold 54px "Plus Jakarta Sans", sans-serif';
+        ctx.fillText(t.headline, 70, 340);
+
+        ctx.fillStyle = '#F1D58A';
+        ctx.font = 'bold 54px "Plus Jakarta Sans", sans-serif';
+        ctx.fillText(t.headlineGold, 70, 410);
+
+        // 5. Data Box Container
+        ctx.fillStyle = 'rgba(12, 29, 54, 0.9)';
+        ctx.strokeStyle = 'rgba(214, 168, 79, 0.4)';
+        ctx.lineWidth = 2;
+        ctx.roundRect(70, 460, 940, 260, 20);
+        ctx.fill();
+        ctx.stroke();
+
+        // Body metrics items
+        t.bodyItems.forEach((item, i) => {
+          const y = 530 + (i * 65);
+          ctx.fillStyle = '#E2E8F0';
+          ctx.font = '500 28px "Plus Jakarta Sans", sans-serif';
+          ctx.textAlign = 'left';
+          ctx.fillText(item.label, 110, y);
+
+          ctx.fillStyle = item.col;
+          ctx.font = 'bold 32px "Space Grotesk", sans-serif';
+          ctx.textAlign = 'right';
+          ctx.fillText(item.val, 970, y);
+        });
+
+        // 6. Subtitle description
+        ctx.fillStyle = '#CBD5E1';
+        ctx.font = '400 24px "Plus Jakarta Sans", sans-serif';
+        ctx.textAlign = 'left';
+        ctx.fillText(t.desc, 70, 770, 940);
+
+        // 7. BOTTOM CO-BRANDED PARTNER CARD
+        ctx.fillStyle = 'rgba(8, 20, 38, 0.95)';
+        ctx.strokeStyle = '#D6A84F';
+        ctx.lineWidth = 4;
+        ctx.roundRect(70, 850, 940, 420, 24);
+        ctx.fill();
+        ctx.stroke();
+
+        // Partner Ribbon
+        ctx.fillStyle = '#D6A84F';
+        ctx.font = 'bold 18px "Plus Jakarta Sans", sans-serif';
+        ctx.fillText('CO-BRANDED WEALTH PARTNER • AUTHORIZED MOTISONS ASSOCIATE', 110, 905);
+
+        // Partner Name & Code
+        ctx.fillStyle = '#FFFFFF';
+        ctx.font = 'bold 44px "Space Grotesk", sans-serif';
+        ctx.fillText(firm, 110, 965);
+
+        ctx.fillStyle = '#F1D58A';
+        ctx.font = 'bold 24px "Space Grotesk", sans-serif';
+        ctx.textAlign = 'right';
+        ctx.fillText(code, 970, 965);
+
+        // Partner Divider
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(110, 1010);
+        ctx.lineTo(970, 1010);
+        ctx.stroke();
+
+        // Advisor, Phone, City
+        ctx.textAlign = 'left';
+        ctx.fillStyle = '#FFFFFF';
+        ctx.font = '600 26px "Plus Jakarta Sans", sans-serif';
+        ctx.fillText('Advisor: ' + adv, 110, 1065);
+
+        ctx.fillStyle = '#34D399';
+        ctx.font = 'bold 28px "Space Grotesk", sans-serif';
+        ctx.fillText('Call / WhatsApp: ' + phone, 110, 1120);
+
+        ctx.fillStyle = '#94A3B8';
+        ctx.font = '24px "Plus Jakarta Sans", sans-serif';
+        ctx.textAlign = 'right';
+        ctx.fillText('Location: ' + city, 970, 1065);
+
+        // Tagline at bottom
+        ctx.fillStyle = '#F1D58A';
+        ctx.font = 'italic bold 24px "Plus Jakarta Sans", sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('"' + tag + '"', 540, 1210);
+
+        // Trigger Download
+        const link = document.createElement('a');
+        link.download = `motisons-infographic-${firm.replace(/\s+/g, '-').toLowerCase()}.png`;
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+      };
+    }
+
+    function shareWhatsApp() {
+      const firm = document.getElementById('partnerFirm').value;
+      const phone = document.getElementById('partnerPhone').value;
+      const t = templates[currentTemplateIdx];
+      const text = encodeURIComponent(`*${t.headline} ${t.headlineGold}*\n\n${t.desc}\n\nPresented by: *${firm}*\nAuthorized Partner of Motisons Shares & Stocks Ltd.\nContact for consultation: ${phone}`);
+      window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
+    }
+
+    // Initialize on page load
+    selectTemplate(0);
+  </script>
+
+  <!-- Global Prototype Switcher -->
+  <script src="switcher.js"></script>
+</body>
+</html>

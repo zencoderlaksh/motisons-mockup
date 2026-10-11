@@ -15,7 +15,10 @@
     { id: "one", name: "Flagship", file: "one.html", num: "1", desc: "Wealth & Capital Ecosystem" },
     { id: "two", name: "Onboarding", file: "two.html", num: "2", desc: "Digital KYC Flow" },
     { id: "three", name: "Universe", file: "three.html", num: "3", desc: "The Investment Universe" },
-    { id: "four", name: "Wealth OS", file: "four.html", num: "4", desc: "Investor Experience" }
+    { id: "four", name: "Wealth OS", file: "four.html", num: "4", desc: "Investor Experience" },
+    { id: "b2b", name: "B2B Studio", file: "b2b-gallery.html", num: "5", desc: "Co-Branded Poster Gallery" },
+    { id: "gemini", name: "Gemini AI", file: "market-updates.html", num: "6", desc: "Market Intelligence" },
+    { id: "advisory", name: "Advisory", file: "advisory.html", num: "7", desc: "Portfolio Architect" }
   ];
 
   // Inject Styles
@@ -210,8 +213,7 @@
   brand.className = "ms-dock-brand";
   brand.title = "Return to Motisons Suite Portal";
   brand.innerHTML = `
-    <div class="ms-dock-logo">M</div>
-    <span class="ms-dock-brand-text">Motisons Suite</span>
+    <img src="assets/motisons-logo.png" alt="Motisons" style="height:20px; width:auto; object-fit:contain;" />
   `;
   pill.appendChild(brand);
 
@@ -299,6 +301,12 @@
       window.location.href = "three.html";
     } else if (e.key === "4") {
       window.location.href = "four.html";
+    } else if (e.key === "5" || e.key.toLowerCase() === "b") {
+      window.location.href = "b2b-gallery.html";
+    } else if (e.key === "6" || e.key.toLowerCase() === "g") {
+      window.location.href = "market-updates.html";
+    } else if (e.key === "7" || e.key.toLowerCase() === "a") {
+      window.location.href = "advisory.html";
     } else if (e.key.toLowerCase() === "m") {
       if (container.style.display === "none") {
         expandDock();
